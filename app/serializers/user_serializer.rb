@@ -1,11 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :password_digest, :picture
-  has_one :task
-  has_many :riddles
-  has_many :words
-  has_many :letters
-  has_many :trivia
-
+  attributes :id, :username, :password_digest, :email, :photo, :age, :bio
+  has_many :posts
+  has_many :comments
+  has_many :shows
+  has_many :ratings
 end
-
-

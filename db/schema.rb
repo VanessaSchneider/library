@@ -15,52 +15,39 @@ ActiveRecord::Schema.define(version: 2022_04_18_145858) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "letters", force: :cascade do |t|
-    t.integer "word_id"
-    t.string "letter"
-    t.string "letter2"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "riddles", force: :cascade do |t|
-    t.integer "task_id"
-    t.string "riddle"
-    t.string "answer1"
-    t.string "answer2"
-    t.string "answer3"
-    t.boolean "correct"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "rocks", force: :cascade do |t|
-    t.integer "task_id"
-    t.boolean "win"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "tasks", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
+    t.integer "post_id"
     t.integer "user_id"
-    t.integer "task1"
-    t.integer "task2"
-    t.integer "task3"
-    t.integer "task4"
-    t.integer "task5"
+    t.string "content"
+    t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "trivia", force: :cascade do |t|
-    t.integer "task_id"
-    t.string "question"
-    t.string "answer1"
-    t.string "answer2"
-    t.string "answer3"
-    t.string "answer4"
-    t.string "correct"
-    t.boolean "guessed"
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "content"
+    t.string "username"
+    t.integer "show_id"
+    t.string "show_name"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "rating"
+    t.integer "show_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "shows", force: :cascade do |t|
+    t.string "name"
+    t.string "photo"
+    t.string "author"
+    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -68,14 +55,10 @@ ActiveRecord::Schema.define(version: 2022_04_18_145858) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "picture"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "words", force: :cascade do |t|
-    t.integer "task_id"
-    t.string "word"
+    t.string "email"
+    t.string "photo"
+    t.integer "age"
+    t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

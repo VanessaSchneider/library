@@ -1,330 +1,283 @@
-/* background-color: linear-gradient(to top, rgba(#cffffe, 0.3), rgba(#f9f7d9, 0.3), rgba(#fce2ce, 0.3), rgba(#ffc1f3, 0.3)); */
-
-body {
-  height: 100vh;
-  background: linear-gradient(#f196bc, #fafaf3, #51c2ff);
+input {
+  border-radius: 5px;
 }
 
-.hidden {
-  visibility: hidden;
+button {
+  cursor: pointer;
+  border-radius: 13px;
 }
 
-.catTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  outline: #3b0b0b solid thick;
-  transition: 0.75s;
-  opacity: 1;
-}
-
-.lepTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  transition: 0.75s;
-  opacity: 1;
-}
-
-.small-size {
-  height: 100px;
-  width: 80px;
-}
-
-.input {
-  width: 10px;
-  height: 25px;
-}
-
-.wordTile {
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  transition: 0.75s;
-  opacity: 1;
-  width: 10px;
-  height: 10px;
-}
-
-.image {
-  position: fixed;
-  top: 0%;
-  height: 50%;
-  width: 80%;
-  border-radius: 70px;
-}
-
-.mapsize {
-  position: sticky;
-  margin-top: 2%;
-  height: 67%;
-  width: 75%;
-  align-content: center;
-  border-radius: 50px;
-  background-position: center;
-}
-
-.places {
-  top: 82%;
-  padding-top: 0;
-  position: flex;
-  align-content: center;
-}
-
-.size {
-  position: absolute;
-  height: 75%;
-  width: 75%;
-  top: 8%;
-  border-radius: 70px;
-  float: center;
-  right: 13%;
-}
-
-.guessLetter {
-  height: 10%;
-  width: 100;
-  left: 5%;
-  top: 60%;
-  position: absolute;
-}
-
-.namegame {
-  top: 50%;
-  width: 100%;
-  height: 10%;
-  right: 1%;
-  position: fixed;
-}
-
-.namegame2 {
-  top: 64%;
-  width: 100%;
-  height: 10%;
-  right: 1%;
-  position: fixed;
-}
-
-.rockButton {
-  height: 120px;
-  width: 120px;
-  border-radius: 8px;
-}
-
-.buttons {
-  border-radius: 6px;
-  align-content: center;
-  z-index: 1;
-}
-.sidebuttons {
-  position: fixed;
-  top: 1%;
-  left: 4%;
-  z-index: 1;
-  padding-left: 1%;
-  padding-right: 1%;
-  border-radius: 6px;
-}
-
-.myprofile {
-  position: fixed;
-  top: 1%;
-  left: 8.7%;
-  z-index: 1;
-  padding-left: 1%;
-  padding-right: 1%;
-  border-radius: 6px;
-}
-
-.login-signup {
-  border-radius: 6px;
-  align-content: center;
-  outline: 10px;
-}
-
-.profile {
-  height: 150px;
-  width: 150px;
-  z-index: 1;
-  border-radius: 40px;
-}
-
-.the-witches {
-  top: 93%;
-  display: block;
-  position: absolute;
-  width: 22%;
-  left: 39%;
-  border-radius: 6px;
+.button2 {
+  cursor: pointer;
+  background-color: Transparent;
+  border: none;
 }
 
 * {
-  font-family: fantasy;
-  text-align: center;
-  font-style: bold;
+  font-family: cursive;
+  font-size: large;
 }
 
-.the-yes {
-  top: 93%;
-  display: block;
-  position: absolute;
-  width: 7%;
-  left: 48%;
-  border-radius: 6px;
+.on {
+  color: #000;
+  background-color: Transparent;
+  border: none;
 }
 
-.witch-correct {
-  top: 63%;
-  display: block;
-  position: absolute;
-  width: 98%;
-  left: 0.5%;
+.off {
+  color: #ccc;
+  background-color: Transparent;
+  border: none;
 }
 
-.eyesize {
-  height: 15px;
-  width: 15px;
-}
-
-.witch-button {
-  top: 75%;
-  display: block;
-  position: absolute;
-  width: 13%;
-  left: 43%;
-  border-radius: 6px;
-}
-
-.the-button {
-  top: 93%;
-  display: block;
-  position: absolute;
-  width: 13%;
-  left: 43%;
-  border-radius: 6px;
-}
-
-.the-end {
-  bottom: 2%;
-  height: 1%;
-  position: fixed;
-  width: 80%;
-  left: 10%;
-}
-
-.the-button2 {
-  top: 74%;
-  display: block;
-  position: absolute;
-  width: 29%;
-  left: 36%;
-  border-radius: 6px;
-}
-
-.riddle-correct {
-  top: 86%;
-  display: block;
-  position: absolute;
-  width: 98%;
-  left: 0.5%;
-
-  .lep-correct {
-    top: 99%;
-    position: absolute;
-    width: 98%;
-    left: 0.5%;
-  }
-}
-
-.button-correct {
-  top: 90%;
-  postion: absolute;
-  height: 10%;
-  right: 10%;
-  z-index: 2;
-}
-
-.middle-section {
-  position: fixed;
-  width: 33%;
-  right: 33%;
-  top: 70%;
-}
-
-.nav-container {
+.nav {
   position: fixed;
   top: 0;
-  left: 4%;
-  width: 50%;
-  height: 20x;
+  left: 0;
+  width: 100%;
+  background-color: navy;
+  height: 40px;
   display: flex;
-  align-items: left;
-  /* justify-content: space-between;  */
+  align-items: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
-  height: 65px;
+  z-index: 2;
+  height: 48px;
 }
 
-.welcome {
-  position: absolute;
+.center {
+  margin-top: 50%;
+  justify-content: center;
+  margin-right: 50%;
+  width: 100%;
   height: 80%;
-  width: 80%;
-  top: 12%;
-  border-radius: 70px;
-  float: center;
-  right: 13%;
 }
 
-.watch {
+.signup {
+  margin-top: 230%;
+  margin-left: -80%;
+}
+
+.comment-delete
+{
+  margin-top: 1%;
+  margin-left: -3%;
+
+}
+
+.comment-delete2
+{
+  margin-top: 1%;
+  margin-left: -1.5%;
+
+}
+
+.login {
+  margin-top: 100%;
+}
+
+.header {
+  margin-left: -49%;
+  font-size: 22px;
+}
+
+.header2 {
+  margin-left: -17%;
+}
+.header3 {
+  margin-left: -78%;
+}
+.header4 {
+  margin-left: -67%;
+}
+
+.below-nav {
+  margin-top: 6%;
+  justify-content: center;
+  display: grid;
+  align-content: center;
+  font-size: 32px;
+}
+
+.below-nav2 {
+  margin-top: 50%;
+  justify-content: center;
+  margin-right: 50%;
+  width: 100%;
+  height: 80%;
+}
+
+.below-nav3 {
+  margin-top: 1%;
+  justify-content: center;
+  display: grid;
+  align-content: center;
+  font-size: 36px;
+}
+
+.writepost {
+  position: -webkit-sticky;
+  margin-left: 50%;
+  margin-top: -4%;
+}
+
+.username {
+  position: sticky;
+  margin-top: -4%;
+  margin-left: 4%;
+}
+
+.post-space {
+  position: sticky;
+  margin-top: 1.5%;
+}
+
+.search {
+  margin-left: -18%;
+}
+
+.book-size {
+  height: 170px;
+  width: 130px;
+  margin-left: 18%;
+}
+
+.feedSize {
+  margin-top: -2%;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  margin-right: 13.5%;
+}
+
+.submit-forms {
+  justify-content: center;
+  display: grid;
+}
+
+.tweetimage {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-left: -9%;
+}
+
+.post-container2 {
+  background-color: white;
+  border-radius: 1em;
+  display: grid;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.post-container {
+  background-color: white;
+  border-radius: 1em;
+  display: grid;
+  justify-content: center;
+}
+
+.post-container-plus {
+  background-color: white;
+  border-radius: 1em;
+  display: grid;
+  justify-content: center;
+  gap: 13px;
+}
+
+.author-container {
+  margin-left: 27%;
+  margin-top: -9%;
+}
+
+
+
+.post-size {
+  min-width: 40%;
+  height: 78px;
+  margin-left: -7%;
+
+}
+
+.post-size5 {
+ 
+  margin-left: 2%;
+
+}
+.post-size6 {
+ 
+  margin-left: -12.5%;
+
+}
+
+.inline {
+  background-color: white;
+  display: grid;
+  justify-content: center;
+}
+
+.post-size2 {
+  margin-left: 12%;
+}
+
+.post-size3 {
+  margin-left: 41%;
+}
+
+.post-size4 {
+  min-width: 40%;
+  height: 78px;
+  margin-left: 12%;
+}
+
+.user-feed-container {
+  text-align: center;
+  width: 100%;
+  gap: 5px;
+  margin-top: 65px;
+  justify-content: center;
+}
+
+.user-feed-image {
   height: 200px;
   width: 200px;
   border-radius: 100%;
-  justify-content: center;
 }
 
-.watch2 {
-  height: 130px;
-  width: 130px;
+.welcome {
+  margin-left: 610px;
+}
+
+.size {
+  height: 550px;
+  width: 550px;
+  margin-left: 28.5%;
   border-radius: 100%;
-  justify-content: center;
 }
 
-.logout-container {
-  position: fixed;
-  top: 1%;
-  right: 9%;
-  z-index: 1;
+.delete-post {
+  margin-left: 47%;
 }
 
-.login-container {
-  position: fixed;
-  top: 0%;
-  right: 9.9%;
-  z-index: 1;
+.comments-container {
+  display: flex;
+  border-top: thin solid rgb(143, 142, 142);
+  gap: 10px;
+  padding-left: 70px;
 }
 
-.signup-container {
-  position: fixed;
-  top: 0%;
-  right: 4%;
-  z-index: 1;
-  padding-left: 1%;
-  padding-right: 2%;
-  padding-bottom: 1%;
-  border-radius: 2px;
+.comments-headline {
+  margin-left: 46.5%;
 }
 
-.h-container {
-  position: fixed;
-  top: 0;
-  height: 0;
-  width: 100%;
-  justify-content: center;
+.side-nav {
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 10%;
+}
+
+.comment-format {
+  margin-top: 12%;
+
+
 }

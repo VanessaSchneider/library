@@ -1,11 +1,11 @@
 import { useState } from "react";
-import eye from "./eye.png";
 
-function Login({ onLogin }) {
+function Login({ onLogin, fetchProfiles }) {
+  const [login, setLogin] = useState(false);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [login, setLogin] = useState(false);
 
+  // login
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/login", {
@@ -21,19 +21,21 @@ function Login({ onLogin }) {
     setPassword("");
   }
 
+  //
+
   const loginBox = (
-    <div>
+    <div className="login">
       <div>
         <form onSubmit={handleSubmit}>
           <div>
-            <div className="login-signup"></div>
+            <div className="mb-3"></div>
             <input
               type="text"
               value={username}
               onChange={(e) => setUserName(e.target.value)}
               placeholder="Username"
             ></input>
-            <div>
+            <div className="mb-3">
               <input
                 type="password"
                 value={password}
@@ -49,15 +51,17 @@ function Login({ onLogin }) {
   );
 
   return (
-    <div className="login-container">
-      <button
-        type="button"
-        className="login-signup"
-        onClick={() => setLogin(!login)}
-      >
-        Login
-      </button>
-      {login ? loginBox : null}
+    <div>
+      <nav>
+        <button
+          type="button"
+          className="btn btn-outline-light"
+          onClick={() => setLogin(!login)}
+        >
+          Login
+        </button>
+        {login ? loginBox : null}
+      </nav>
     </div>
   );
 }

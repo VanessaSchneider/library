@@ -1,30 +1,9 @@
-# w1 = Word.create(word: "MEATLOAF")
-
-# w2 = Word.create(word: "OLGA")
 
 
-
-# l1 = Letter.create(word_id:w1.id, letter:"M")
-# l2 = Letter.create(word_id:1, letter:"E")
-# l3 = Letter.create(word_id:1, letter:"A")
-# l4 = Letter.create(word_id:1, letter:"T")
-# l5 = Letter.create(word_id:1,letter:"L")
-# l6= Letter.create(word_id:1, letter:"O")
-# l7= Letter.create(word_id:1, letter:"A")
-# l8= Letter.create(word_id:1, letter:"F")
-# l9 = Letter.create(word_id:2, letter:"O")
-# l10 = Letter.create(word_id:2, letter:"L")
-# l11 = Letter.create(word_id:2, letter:"G")
-# l12 = Letter.create(word_id:2, letter:"A")
-
-
-# r1 = Riddle.create(riddle: "What has eyes but cannot see?", answer1: "potato", answer2: "a potato", answer3: "tater", correct: false)
-# r2 = Riddle.create(riddle: "What has hands but cannot clap?", answer1: "clock", answer2: "a clock", answer3: "t rex", correct: false)
-# r3 = Riddle.create(riddle: "I have many teeth but cannot bite.", answer1: "comb", answer2: "a comb", answer3: "combs", correct: false)
-# r4 = Riddle.create(riddle: "The more of me there is, the less you can see.?", answer1: "dark", answer2: "the dark", answer3: "darkness", correct: false)
-
-
-
-
-
+s1 = Show.create(name: "Charlotte's Web", photo: "https://images-na.ssl-images-amazon.com/images/I/51tP8AeYLPL._SX331_BO1,204,203,200_.jpg", rating: nil, author: "E.B. White")
+s2 = Show.create(name: "The Great Gatsby", photo: "https://i.etsystatic.com/25050078/r/il/4a3ecf/3511845067/il_1588xN.3511845067_2r4f.jpg", rating: nil, author: "F. Scott Fitzgerald")
+s3 = Show.create(name: "Lord of the Flies", photo: "https://upload.wikimedia.org/wikipedia/en/9/9b/LordOfTheFliesBookCover.jpg", rating: nil, author: "William Golding")
+s4 = Show.create(name: "Romeo and Juliet", photo: "https://pictures.abebooks.com/isbn/9780141396477-us.jpg", rating: nil, author: "William Shakespeare")
+s5 = Show.create(name: "Frankenstein", photo:"https://i0.wp.com/www.printmag.com/wp-content/uploads/2017/10/2a34d8_7edc06080c344f958cde383a3fa6f3f1mv2-1.jpg?resize=564%2C946&ssl=1", rating: nil, author: "Mary Shelley")
+s6 = Show.create(name: "Pride and Prejudice", photo: "https://images-na.ssl-images-amazon.com/images/I/91HqOO4DmRL.jpg", rating: nil, author: "Jane Austen")
 

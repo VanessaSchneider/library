@@ -1,33 +1,38 @@
-.doorSize{
-    width:200px;
-    height:300px;
-    z-index: 1;
-  top: 10% }
+.App {
+  text-align: center;
+}
 
-    #door{
-     margin-top:100px;
-      /* margin-left:600px;  */
-    transform:perspective(300px) rotate(0deg);
-    transform-origin:0% 0%;
-    animation:open 3s linear;
-   }
-   
-   @keyframes open{
-     0%{ transform:perspective(300px) rotateY(80deg);
-   }
-   25%{ transform:perspectives(300px) rotateY(0deg);
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
-   }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
-   50%{ transform:perspectives(300px) rotateY(20deg);
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
-   }
+.App-link {
+  color: #61dafb;
+}
 
-   75%{ transform:perspectives(300px) rotateY(0deg);
-
-   }
-
-   100%{ transform:perspectives(300px) rotateY(80deg);
-
-   }}
-
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

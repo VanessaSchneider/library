@@ -1,121 +1,197 @@
-import Login from "./Login.js";
-import { useState, useEffect } from "react";
-import Signup from "./Signup";
-import Logout from "./Logout.js";
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
-import fairy from "./fairy.png";
-import Fairy from "./Fairy.js";
-import Leprechaun from "./Leprechaun.js";
-import Game1 from "./Game1.js";
-import Witch from "./Witch.js";
-import Goblin from "./Goblin.js";
-import Map from "./Map.js";
-import Warlock from "./Warlock.js";
-import NavBar from "./NavBar.js";
-import Home from "./Home.js";
-import Welcome from "./welcome.png";
-import Profile from "./Profile.js";
+import Login from './Login.js'
+import { useState, useEffect } from 'react'
+import Signup from './Signup'
+import Logout from './Logout.js'
+import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom'
+import FeedPage from './FeedPage.js'
+import MakePost from './MakePost.js'
+import UserPage from './UserPage'
+import ShowPage from './ShowPage'
+import TweetPage from './TweetPage'
+import CommentPage from './CommentPage'
+import photo from './photo.jpeg'
 
-function App() {
-  const [user, setUser] = useState(null);
-  const [textBoxes, setTextBoxes] = useState(0);
-  const history = useHistory();
-  const [riddles, setRiddles] = useState([]);
-  const [tasks, setTask] = useState("");
-  const [taskCompleted, setTaskCompleted] = useState(false);
+function App () {
+  const [user, setUser] = useState(null)
+  const [posts, setPosts] = useState([])
+  const [users, setUsers] = useState([])
+  const [comments, setComments] = useState([])
+  const history = useHistory()
+  const location = useLocation()
+  const [makePostDisplay, setMakePostDisplay] = useState(false)
+  const [commentForm, setCommentForm] = useState(false)
 
   const handleReroute = () => {
-    console.log("Reroute!");
-    history.push("/");
-  };
+    console.log('Reroute!')
+    history.push('/')
+  }
 
   useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch('/me').then(response => {
       if (response.ok) {
-        response.json().then((data) => setUser(data));
+        response.json().then(data => setUser(data))
       }
-    });
-  }, []);
-
-  function login(username, password) {
-    localStorage.clear();
-    fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, password }),
     })
-      .then((r) => r.json())
-      .then((data) => (user.username ? setUser(data) : null));
+  }, [])
+
+  console.log('location', location.pathname)
+
+  function login (username, password) {
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    })
+      .then(r => r.json())
+      .then(data => (user.username ? setUser(data) : null))
   }
 
-  function handleLogout() {
-    localStorage.clear();
-    setUser((user)=>null)
-    fetch("/logout", {
-      method: "DELETE",
-    })
-      .then(() => setUser(null))
-      .then(() => history.push("/"));
-      localStorage.clear();
+  function handleAddPost (newPost) {
+    setPosts([newPost, ...posts])
+  }
+  function handleDeletePost (id) {
+    const updatedPosts = posts.filter(post => post.id !== id)
+    setPosts(updatedPosts)
   }
 
   useEffect(() => {
-    fetch("/getTasks")
-      .then((res) => res.json())
-      .then((data) => setTask(data));
-  }, []);
+    fetch('/posts')
+      .then(res => res.json())
+      .then(data => setPosts(data))
+  }, [])
+
+  useEffect(() => {
+    fetch('/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+  }, [])
+
+  useEffect(() => {
+    fetch('/comments')
+      .then(res => res.json())
+      .then(data => setComments(data))
+  }, [])
+
+  function handleLogout () {
+    fetch('/logout', {
+      method: 'DELETE'
+    })
+      .then(() => setUser())
+      .then(() => handleReroute())
+  }
+
+  function handleAddComment (comment) {
+    setComments([comment, ...comments])
+  }
+
+  function handleDeleteProfile () {
+    fetch(`/users/${user.id}`, {
+      method: 'DELETE'
+    })
+      .then(() => setUser())
+      .then(() => handleReroute())
+  }
+
+  function handleDeleteComment (id) {
+    const updatedComments = comments.filter(comment => comment.id !== id)
+    setComments(updatedComments)
+  }
 
   return (
     <div>
-      {user ? (
-        <Logout handleLogout={handleLogout} />
-      ) : (
-        <Login onLogin={setUser} />
-      )}
-      {user ? null : <Signup onLogin={setUser} login={login} />}
-      {user ? null : <h1> Welcome to Kingdom Quest!</h1>}
-      <NavBar
-        taskCompleted={taskCompleted}
-        setTaskCompleted={setTaskCompleted}
-        user={user}
-      />
-      {user ? null : <img src={Welcome} className="welcome"></img>}
-      {user && user.username ? <Home /> : null}
-
+      <div>
+        <div>
+          <nav className='nav'>
+            {user ? null : <Signup onLogin={setUser} login={login} />}
+            {user ? (
+              <Logout handleLogout={handleLogout} />
+            ) : (
+              <Login onLogin={setUser} />
+            )}
+            {user ? (
+              <MakePost
+                makePostDisplay={makePostDisplay}
+                setMakePostDisplay={setMakePostDisplay}
+                handleAddPost={handleAddPost}
+                user={user}
+                setUser={setUser}
+              />
+            ) : null}
+            {/* {user && location.pathname !=="/messages" ? <Link to="/messages">
+    <button >Messages</button>
+    </Link>: null} */}
+            {/* {user && location.pathname !=="/vote" ? <Link to="/vote">
+    <button >Rate the Movie</button>
+    </Link>: null} */}
+            {user && location.pathname !== '/' ? (
+              <Link to='/'>
+                <button>Home</button>
+              </Link>
+            ) : null}
+          </nav>
+          <br></br>
+          {user ? null : <h1 className='below-nav3'>Read & Talk</h1>}
+          {user ? null : <img src={photo} className='size'></img>}
+        </div>
+      </div>
       <Switch>
-        <Route exact path="/fairy">
-          <Fairy user={user} setUser={setUser} />
+        <Route exact path='/'>
+          <div>
+            {user && makePostDisplay === false ? (
+              <h1 className='below-nav'>Welcome {user.username} </h1>
+            ) : null}
+          </div>
+          {user && makePostDisplay === false ? (
+            <FeedPage
+              user={user}
+              setUser={setUser}
+              posts={posts}
+              users={users}
+              commentForm={commentForm}
+              setCommentForm={setCommentForm}
+            />
+          ) : null}
+     
         </Route>
-        <Route exact path="/leprechaun">
-          <Leprechaun
-            taskCompleted={taskCompleted}
-            setTaskCompleted={setTaskCompleted}
-            user={user}
-            setUser={setUser}
+        <Route exact path={`/users/:username`}>
+          <UserPage
+            users={users}
+            commentForm={commentForm}
+            setCommentForm={setCommentForm}
           />
         </Route>
-        <Route exact path="/witch">
-          <Witch user={user} setUser={setUser} />
+        <Route exact path={`/shows/:name`}>
+          <ShowPage
+            users={users}
+            commentForm={commentForm}
+            setCommentForm={setCommentForm}
+          />
         </Route>
-        <Route exact path="/goblin">
-          <Goblin user={user} setUser={setUser} />
+      
+    
+        <Route exact path={`/posts/:id`}>
+          <TweetPage
+            user={user}
+            handleDeletePost={handleDeletePost}
+            commentForm={commentForm}
+            setCommentForm={setCommentForm}
+            handleAddComment={handleAddComment}
+            comments={comments}
+          />
         </Route>
-        <Route exact path="/map">
-          <Map user={user} setUser={setUser} />
-        </Route>
-        <Route exact path="/warlock">
-          <Warlock user={user} />
-        </Route>
-        <Route exact path="/">
-          <Home user={user} setUser={setUser} />
-        </Route>
-        <Route exact path="/profile">
-          <Profile />
+        <Route exact path={`/comments/:id`}>
+          <CommentPage
+            handleAddComment={handleAddComment}
+            handleDeleteComment={handleDeleteComment}
+            user={user}
+            comments={comments}
+          />
         </Route>
       </Switch>
     </div>
-  );
+  )
 }
-export default App;
+
+export default App
