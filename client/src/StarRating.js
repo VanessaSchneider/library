@@ -5,6 +5,10 @@ function StarRating ({ rating, setRating }) {
     <div className='post-size2'>
       {[...Array(5)].map((star, index) => {
         index += 1
+
+
+
+
         return (
           <button
             type='button'

@@ -90,7 +90,8 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
     reset()
     setContent('')
 
-    if (rating !== null) {
+
+   
       fetch(`/ratings`, {
         method: 'POST',
         headers: {
@@ -100,9 +101,10 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
       })
         .then(r => r.json())
         .then(newrating => console.log(newrating))
-    }
+    
   }
 
+  console.log("rating", rating)
   function handleWritePostClick () {
     setMakeFirstPostIsHidden(makeFirstPostIsHidden => !makeFirstPostIsHidden)
     setMakePostDisplay(makePostDisplay => !makePostDisplay)

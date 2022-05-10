@@ -3,7 +3,6 @@ class Rating < ApplicationRecord
   belongs_to :user
 
 
-  # validates :numericality: {greater_than_or_equal_to: 1}
 
   def ratings_check
       show_id = self.show_id
