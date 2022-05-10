@@ -49,8 +49,8 @@ function ShowPage ({ users }) {
       <br></br>
       <br></br>
       <br></br>
+      <h1 className='post-container6'>{show.name}</h1>
       <div className='post-container'>
-        <h2 className='post-container'>{show.name}</h2>
         <h3 className='author-container'>{show.author}</h3>
         <img img className='book-size' src={show.photo}></img>
         <h4 className='post-container'>Rating based on users voting </h4>
