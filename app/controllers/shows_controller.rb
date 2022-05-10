@@ -34,6 +34,16 @@ class ShowsController < ApplicationController
             end
 
 
+            def create
+              show = Show.create(show_params)
+            if show.valid?
+                render json: show, status: :created
+            else
+                render json: { errors: show.errors.full_messages }, status: :unprocessable_entity
+            end
+          end
+
+
 
         def show_params
             params.permit(:name, :author, :photo)

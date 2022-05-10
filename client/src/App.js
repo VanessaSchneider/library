@@ -10,6 +10,7 @@ import ShowPage from './ShowPage'
 import TweetPage from './TweetPage'
 import CommentPage from './CommentPage'
 import photo from './photo.jpeg'
+import AddBook from './AddBook'
 
 function App () {
   const [user, setUser] = useState(null)
@@ -20,6 +21,7 @@ function App () {
   const location = useLocation()
   const [makePostDisplay, setMakePostDisplay] = useState(false)
   const [commentForm, setCommentForm] = useState(false)
+  const [addBookDisplay, setAddBookDisplay] = useState(false)
 
   const handleReroute = () => {
     console.log('Reroute!')
@@ -111,6 +113,7 @@ function App () {
               <Login onLogin={setUser} />
             )}
             {user ? (
+              <div>
               <MakePost
                 makePostDisplay={makePostDisplay}
                 setMakePostDisplay={setMakePostDisplay}
@@ -118,7 +121,9 @@ function App () {
                 user={user}
                 setUser={setUser}
               />
+              </div>
             ) : null}
+            {user ? <AddBook/> : null}
             {/* {user && location.pathname !=="/messages" ? <Link to="/messages">
     <button >Messages</button>
     </Link>: null} */}
