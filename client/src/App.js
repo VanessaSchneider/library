@@ -21,7 +21,6 @@ function App () {
   const location = useLocation()
   const [makePostDisplay, setMakePostDisplay] = useState(false)
   const [commentForm, setCommentForm] = useState(false)
-  const [addBookDisplay, setAddBookDisplay] = useState(false)
 
   const handleReroute = () => {
     console.log('Reroute!')
@@ -100,6 +99,8 @@ function App () {
     const updatedComments = comments.filter(comment => comment.id !== id)
     setComments(updatedComments)
   }
+  function noPostDisplay(){ setMakePostDisplay(makePostDisplay => false)
+  }
 
   return (
     <div>
@@ -123,10 +124,9 @@ function App () {
               />
               </div>
             ) : null}
-            {user ? <AddBook/> : null}
-            {/* {user && location.pathname !=="/messages" ? <Link to="/messages">
-    <button >Messages</button>
-    </Link>: null} */}
+            {user && location.pathname !=="/AddBook" && makePostDisplay === false ? <Link to="/AddBook">
+    <button onClick={noPostDisplay}>Add Book</button>
+    </Link>: null}
             {/* {user && location.pathname !=="/vote" ? <Link to="/vote">
     <button >Rate the Movie</button>
     </Link>: null} */}
@@ -144,11 +144,11 @@ function App () {
       <Switch>
         <Route exact path='/'>
           <div>
-            {user && makePostDisplay === false ? (
+            {user && makePostDisplay === false ?(
               <h1 className='below-nav'>Welcome {user.username} </h1>
             ) : null}
           </div>
-          {user && makePostDisplay === false ? (
+          {user && makePostDisplay === false? (
             <FeedPage
               user={user}
               setUser={setUser}
