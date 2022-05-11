@@ -87,10 +87,10 @@ function TweetPage ({
           </div>
           <div className='post-container'>{post.content}</div>
           {post.username === user.username ? (
-            <div className = "comment-delete2">
-            <button onClick={handleDelete} className='delete-post'>
-              Delete Post
-            </button>
+            <div className='comment-delete2'>
+              <button onClick={handleDelete} className='delete-post'>
+                Delete Post
+              </button>
             </div>
           ) : null}
           <div className='side-nav'>

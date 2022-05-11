@@ -76,7 +76,6 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
       show_name: show.name
     }
 
-  
     console.log(formData)
     fetch('/posts', {
       method: 'POST',
@@ -90,24 +89,22 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
     setMakePostDisplay(makePostDisplay => !makePostDisplay)
     reset()
     setContent('')
-  
+
     sendRatings()
-   
-    
   }
-function sendRatings(){
+  function sendRatings () {
+    fetch(`/ratings`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(ratingData)
+    })
+      .then(r => r.json())
+      .then(newrating => console.log('newrating', newrating))
+  }
 
-  fetch(`/ratings`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(ratingData)
-  })
-    .then(r => r.json())
-    .then(newrating => console.log("newrating",newrating))}
-
-  console.log("rating", rating)
+  console.log('rating', rating)
   function handleWritePostClick () {
     setMakeFirstPostIsHidden(makeFirstPostIsHidden => !makeFirstPostIsHidden)
     setMakePostDisplay(makePostDisplay => !makePostDisplay)
@@ -143,7 +140,6 @@ function sendRatings(){
     setShow('')
     setMakePostDisplay(makePostDisplay => false)
     setRating(null)
-
   }
 
   function reset2 () {
@@ -225,7 +221,7 @@ function sendRatings(){
                 {showStars ? "Don't Rate Book" : 'Rate the Book!'}{' '}
               </button>
               {showStars ? (
-                <div className='post-size6' >
+                <div className='post-size6'>
                   <br></br>
                   <StarRating rating={rating} setRating={setRating} />
                 </div>

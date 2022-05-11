@@ -22,7 +22,7 @@ function ShowPage ({ users }) {
       .then(show => setShow(show))
   }, [])
 
-  console.log("show",show)
+  console.log('show', show)
   let post = []
 
   if (show.posts && show.posts.length !== 0) {

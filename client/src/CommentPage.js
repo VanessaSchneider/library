@@ -65,10 +65,11 @@ function CommentPage ({ handleDeleteComment }) {
         </div>
       ) : null}
       {comment.username === user.username ? (
-        <div className = "comment-delete">
-        <button onClick={handleDelete} className='delete-post'>
-          Delete Comment
-        </button> </div>
+        <div className='comment-delete'>
+          <button onClick={handleDelete} className='delete-post'>
+            Delete Comment
+          </button>{' '}
+        </div>
       ) : null}
     </div>
   )
