@@ -56,7 +56,7 @@ function ShowPage ({ users }) {
       <div className='post-container'>
         <h3 className='author-container'>{show.author}</h3>
         <img img className='book-size' src={show.photo}></img>
-        <h4 className='post-container'>Rating based off of {show.rating_number} user reviews </h4>
+        <h4 className='post-container'>{show.rating_number} user reviews </h4>
         <div className='post-container'>
           <div className='star-rating'>
             {[...Array(5)].map((star, index) => {
