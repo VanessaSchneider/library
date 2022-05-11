@@ -8,12 +8,12 @@ function CommentContainer ({ post, comments, handleAddComment }) {
   let comment = []
   if (comments)
     comment = comments.map(comment => (
-      <div className='post-container'>
+      <div className='post-container2'>
         <div className='tweet-page-comment'>
           <Link to={`/users/${comment.username}`}>{comment.username}</Link>
         </div>
-        <div className='post-container'>
-          <div className='post-container'>
+        <div className='post-container2'>
+          <div className='post-container2'>
             <Link to={`/comments/${comment.id}`}>
               <button className='button2'>{comment.content}</button>
             </Link>
