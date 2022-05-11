@@ -20,6 +20,7 @@ post "/addfriend", to: "friends#create"
 
   post "/signup", to: "users#create"
   get "/me", to: "users#me"
+  post "/makebook", to: "shows#create"
 
 
   post "/login", to: "sessions#login"

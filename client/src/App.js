@@ -160,6 +160,10 @@ function App () {
           ) : null}
      
         </Route>
+        <Route exact path={`/AddBook`}>
+          <AddBook
+          />
+        </Route>
         <Route exact path={`/users/:username`}>
           <UserPage
             users={users}
@@ -167,6 +171,8 @@ function App () {
             setCommentForm={setCommentForm}
           />
         </Route>
+
+
         <Route exact path={`/shows/:name`}>
           <ShowPage
             users={users}
@@ -174,6 +180,8 @@ function App () {
             setCommentForm={setCommentForm}
           />
         </Route>
+        
+      
       
     
         <Route exact path={`/posts/:id`}>

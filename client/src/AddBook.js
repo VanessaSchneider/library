@@ -19,8 +19,7 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
       body: JSON.stringify(bookData)
     })
       .then(r => r.json())
-    //   .then(r => r.json())
-    //   .then(comment => handleAddComment(comment))
+    .then(data => console.log(data))
     // setCommentForm(commentForm => false)
     // setContent('')
   }
@@ -28,7 +27,11 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
 
    
   return (
-    <div>
+<div>
+    <div className = "add-book1">
+    <h3>Don't see the book you want to discuss, add it to our list</h3>
+    </div>
+    <div className = "add-book">
     <form onSubmit={handleSignup}>
       <div>
         <input
@@ -60,7 +63,7 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
       </div>
     </form>
   </div>
-
+  </div>
 
 
 
