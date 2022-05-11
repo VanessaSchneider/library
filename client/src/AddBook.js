@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import {useHistory } from 'react-router-dom'
 
 
 function AddBook ({addBookDisplay, setAddBookDisplay}) {
@@ -7,7 +8,13 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
   const [author, setAuthor] = useState('')
   const [addBook, setAddBook] = useState(false)
   const bookData = { name: name, author: author, photo: photo }
+  const history = useHistory()
  
+
+  const handleReroute = () => {
+    console.log('Reroute!')
+    history.push('/')
+  }
 
   function handleSignup (e) {
     e.preventDefault()
@@ -22,6 +29,8 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
     .then(data => console.log(data))
     // setCommentForm(commentForm => false)
     // setContent('')
+    alert('You have added the book to our, now you can make a post')
+   handleReroute()
   }
 
 

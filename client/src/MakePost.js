@@ -89,8 +89,6 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
     setMakePostDisplay(makePostDisplay => !makePostDisplay)
     reset()
     setContent('')
-
-
    
       fetch(`/ratings`, {
         method: 'POST',
@@ -100,7 +98,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
         body: JSON.stringify(ratingData)
       })
         .then(r => r.json())
-        .then(newrating => console.log(newrating))
+        .then(newrating => console.log("newrating",newrating))
     
   }
 
@@ -139,6 +137,8 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
     setMakeFirstPostIsHidden(makeFirstPostIsHidden => false)
     setShow('')
     setMakePostDisplay(makePostDisplay => false)
+    setRating(null)
+
   }
 
   function reset2 () {
