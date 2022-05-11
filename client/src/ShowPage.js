@@ -46,6 +46,7 @@ function ShowPage ({ users }) {
     ))
   }
 
+  console.log(show.rating)
   return (
     <div>
       <br></br>
@@ -64,7 +65,7 @@ function ShowPage ({ users }) {
                 <button
                   type='button'
                   key={index}
-                  className={index <= {show.rating} ? 'on' : 'off'}
+                  className={index <= show.rating ? 'on' : 'off'}
                 >
                   <span>&#9733;</span>
                 </button>
