@@ -13,6 +13,8 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
   const [rating, setRating] = useState(null)
   const history = useHistory()
 
+  const ratingData = { rating: rating, show_id: show.id, user_id: user.id }
+
   const handleReroute = () => {
     console.log('Reroute!')
     history.push('/')
@@ -74,8 +76,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
       show_name: show.name
     }
 
-    const ratingData = { rating: rating, show_id: show.id, user_id: user.id }
-
+  
     console.log(formData)
     fetch('/posts', {
       method: 'POST',
@@ -89,18 +90,22 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
     setMakePostDisplay(makePostDisplay => !makePostDisplay)
     reset()
     setContent('')
+  
+    sendRatings()
    
-      fetch(`/ratings`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(ratingData)
-      })
-        .then(r => r.json())
-        .then(newrating => console.log("newrating",newrating))
     
   }
+function sendRatings(){
+
+  fetch(`/ratings`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(ratingData)
+  })
+    .then(r => r.json())
+    .then(newrating => console.log("newrating",newrating))}
 
   console.log("rating", rating)
   function handleWritePostClick () {
