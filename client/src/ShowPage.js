@@ -21,6 +21,8 @@ function ShowPage ({ users }) {
       .then(r => r.json())
       .then(show => setShow(show))
   }, [])
+
+  console.log("show",show)
   let post = []
 
   if (show.posts && show.posts.length !== 0) {
@@ -62,7 +64,7 @@ function ShowPage ({ users }) {
                 <button
                   type='button'
                   key={index}
-                  className={index <= show.rating ? 'on' : 'off'}
+                  className={index <= {show.rating} ? 'on' : 'off'}
                 >
                   <span>&#9733;</span>
                 </button>
