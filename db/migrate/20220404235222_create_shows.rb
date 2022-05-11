@@ -5,6 +5,7 @@ class CreateShows < ActiveRecord::Migration[6.1]
       t.string :photo
       t.string :author
       t.integer :rating
+      t.integer :rating_number
 
       t.timestamps
     end
