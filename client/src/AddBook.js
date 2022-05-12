@@ -13,7 +13,7 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
 
   const handleReroute = () => {
     console.log('Reroute!')
-    history.push('/')
+    history.push('/') 
   }
 
   function handleSignup (e) {

@@ -52,9 +52,9 @@ function ShowPage ({ users }) {
       <br></br>
       <br></br>
       <br></br>
-      <h1 className='post-container'>{show.name}</h1>
+      <h1 className='post-container-bigger'>{show.name}</h1>
       <div className='post-container'>
-        <h3 className='post-container'>{show.author}</h3>
+        <h3 className='post-container-smaller'>{show.author}</h3>
         <img img className='book-size' src={show.photo}></img>
         <h4 className='post-container'>{show.rating_number} user reviews </h4>
         <div className='post-container'>

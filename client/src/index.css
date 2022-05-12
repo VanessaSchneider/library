@@ -79,7 +79,7 @@ input {
 
 .add-book1 {
   margin-top: 4%;
-  margin-left: 36%;
+  margin-left: 34%;
 
 }
 
@@ -295,8 +295,18 @@ button {
   position:-webkit-sticky;
 
 }
+.post-container-smaller {
+  display: grid;
+  justify-content: center;
+  margin-top: -.8%;
+}
 
 .post-container {
+  display: grid;
+  justify-content: center;
+}
+.post-container-bigger {
+  font-size: 32px;
   display: grid;
   justify-content: center;
 }
