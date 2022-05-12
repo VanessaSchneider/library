@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-function FeedPage ({ posts, user, commentForm, setCommentForm }) {
+function FeedPage ({posts, commentForm, setCommentForm, setPosts}) {
+  const [user, setUser] = useState(null)
   function showCommentForm () {
     setCommentForm(commentForm => true)
   }
-  console.log(posts, user)
+
+
   let post = []
-  if (user.username && posts && posts.length !== 0) {
+
+  function runPost(){
+    setPosts(posts)
+    console.log(posts)
     post = posts.map(post => (
       <div key={post.id}>
       
@@ -37,10 +42,11 @@ function FeedPage ({ posts, user, commentForm, setCommentForm }) {
           </div>
         </div>
       </div>
-    ))
-  } else {
-    return null
-  }
+    ))}
+
+
+ runPost()
+
   console.log(commentForm)
   return (
     <div className='user-feed-container'>

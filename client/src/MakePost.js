@@ -123,7 +123,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
       makeSecondPostHidden === false
     ) {
       return (
-        <div className='submit-forms'>
+        <div className='dont-post'>
           <button className='button-center' onClick={handleWritePostClick}>
             Don't Write a Post{' '}
           </button>

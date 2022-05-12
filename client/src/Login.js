@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Login ({ onLogin, fetchProfiles }) {
+function Login ({ onLogin}) {
   const [login, setLogin] = useState(false)
   const [username, setUserName] = useState('')
   const [password, setPassword] = useState('')

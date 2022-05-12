@@ -167,6 +167,7 @@ function App () {
               user={user}
               setUser={setUser}
               posts={posts}
+              setPosts= {setPosts}
               users={users}
               commentForm={commentForm}
               setCommentForm={setCommentForm}
