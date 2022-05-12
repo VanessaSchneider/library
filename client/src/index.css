@@ -411,6 +411,13 @@ margin-top: 2%;}
   margin-left: 41%;
 }
 
+
+.post-container0{
+position: -webkit-sticky;
+margin-left: -99%;
+
+
+}
 .post-size4 {
   min-width: 40%;
   height: 78px;
