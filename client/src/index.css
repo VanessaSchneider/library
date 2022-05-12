@@ -245,7 +245,7 @@ button {
 
 .username {
   position: sticky;
-  margin-top: -4%;
+  margin-top: -2%;
   margin-left: 1.9%;
 }
 
@@ -261,7 +261,9 @@ button {
 .book-size {
   height: 230px;
   width: 170px;
-  margin-left: 8%;
+    display: grid;
+    justify-content: center;
+  
 }
 
 .feedSize {
@@ -295,7 +297,6 @@ button {
 }
 
 .post-container {
-  border-radius: 1em;
   display: grid;
   justify-content: center;
 }
