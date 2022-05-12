@@ -6,7 +6,7 @@ function FeedPage ({ posts, user, commentForm, setCommentForm }) {
   }
   console.log(posts, user)
   let post = []
-  if (user && posts && posts.length !== 0) {
+  if (user.username && posts && posts.length !== 0) {
     post = posts.map(post => (
       <div key={post.id}>
       
