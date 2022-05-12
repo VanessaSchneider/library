@@ -114,7 +114,7 @@ function TweetPage ({
           ) : null}
           {commentForm ? null : (
             <div>
-              <h3 className='comments-headline'>Comments</h3>
+              <h3 className='post-container'>Comments</h3>
               <CommentContainer post={post} comments={filteredComments} />
             </div>
           )}
