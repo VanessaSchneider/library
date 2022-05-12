@@ -114,7 +114,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
   function buttonToShow () {
     if (makeFirstPostIsHidden === false && makeSecondPostHidden === false) {
       return (
-        <button className='submit-forms' onClick={handleWritePostClick}>
+        <button className='make-post-button' onClick={handleWritePostClick}>
           Write a Post
         </button>
       )

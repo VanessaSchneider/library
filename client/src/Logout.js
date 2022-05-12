@@ -3,7 +3,7 @@ function Logout ({ handleLogout }) {
     <header>
       <button
         type='button'
-        className='btn btn-outline-danger'
+        className='logout-button'
         onClick={handleLogout}
       >
         Logout

@@ -117,7 +117,7 @@ function Signup ({ login }) {
   )
 
   return (
-    <div>
+    <div className = "signup-button">
       <nav>
         <button
           type='button'

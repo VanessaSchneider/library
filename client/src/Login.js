@@ -24,8 +24,8 @@ function Login ({ onLogin, fetchProfiles }) {
   //
 
   const loginBox = (
-    <div className='login'>
-      <div>
+    <div>
+      <div className='login'>
         <form onSubmit={handleSubmit}>
           <div>
             <div className='mb-3'></div>
@@ -51,11 +51,10 @@ function Login ({ onLogin, fetchProfiles }) {
   )
 
   return (
-    <div>
+    <div  className='login-button'>
       <nav>
         <button
           type='button'
-          className='btn btn-outline-light'
           onClick={() => setLogin(!login)}
         >
           Login

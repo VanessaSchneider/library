@@ -129,7 +129,7 @@ function App () {
             location.pathname !== '/AddBook' &&
             makePostDisplay === false ? (
               <Link to='/AddBook'>
-                <button onClick={noPostDisplay}>Add Book</button>
+                <button className = "add-book-button"onClick={noPostDisplay}>Add Book</button>
               </Link>
             ) : null}
             {/* {user && location.pathname !=="/vote" ? <Link to="/vote">

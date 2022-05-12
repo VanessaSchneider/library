@@ -1,6 +1,38 @@
+
+
 input {
   border-radius: 5px;
 }
+
+.add-book-button{
+  margin-left: -83%;
+  position: absolute;
+  margin-top: -1.2%;
+}
+
+.make-post-button{
+  margin-left: -44%;
+  position: absolute;
+  margin-top: -1.2%;
+}
+
+.logout-button{
+  margin-left: 1660%;
+  position: sticky;
+  margin-top: -1.2%;
+}
+
+.signup-button{
+  margin-left: 77%;
+  position: absolute;
+  margin-top: .1%;
+}
+.login-button{
+  margin-right: -88%;
+  position: sticky;
+  margin-top: .1%;
+}
+
 
 .add-book {
   margin-top: 6%;
@@ -84,6 +116,8 @@ button {
 
 .login {
   margin-top: 100%;
+  position: absolute;
+  margin-left: -180%;
 }
 
 .header {
