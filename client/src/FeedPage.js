@@ -24,13 +24,13 @@ function FeedPage ({ posts, user, commentForm, setCommentForm }) {
           </div>
           <div className='writepost'>
             <Link to={`/posts/${post.id}`}>
-              <button onClick={showCommentForm}>Make Comment</button>
+              <button className ="clear" onClick={showCommentForm}>Make Comment</button>
             </Link>
           </div>
           <div className='post-container2'>
             <Link to={`/shows/${post.show.name}`}>#{post.show.name}</Link>
           </div>
-          <div className='post-container'>
+          <div className='see-comments'>
             <Link to={`/posts/${post.id}`}>
               <button className='button2'>See Comments</button>
             </Link>

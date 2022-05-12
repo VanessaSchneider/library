@@ -151,8 +151,8 @@ function App () {
             ) : null}
           </nav>
           <br></br>
-          {user ? null : <h1 className='below-nav3'>Read & Talk</h1>}
-          {/* {user ? null : <img src={photo} className='size'></img>} */}
+          {user ? null : <h1 className='see-comments'>Read & Talk</h1>}
+
         </div>
       </div>
       <Switch>

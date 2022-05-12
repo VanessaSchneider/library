@@ -59,7 +59,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
       (makeSecondPostHidden === true && show.name)
     ) {
       return (
-        <h3 className='header'>
+        <h3 className='header5'>
           You are writing a post about the book, {show.name}
         </h3>
       )
@@ -206,9 +206,9 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
             <div className='header2'>
               <form onSubmit={handleSubmit}>
                 <input
-                  className='post-size'
+                  className='post-size8'
                   type='text'
-                  placeholder='     Write your post'
+                  placeholder='            Write your post'
                   onChange={handlePost}
                   value={content}
                 />
@@ -227,7 +227,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
                 </div>
               ) : null}
             </div>
-            <div>
+            <div className = "dontpost">
               <br></br>
               <button onClick={reset}>Don't Make a Post </button>
             </div>

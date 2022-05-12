@@ -1,51 +1,73 @@
-
+body {
+  height: 100vh;
+  background: linear-gradient(#97cff1, #e1ffff, #97cff1);
+}
 
 input {
   border-radius: 5px;
 }
 
-.home-button{
-  margin-left: 82%;
+.home-button {
   position: absolute;
-  margin-top: .1%;
-  
+  margin-top: -.2%;
+  margin-left: 77%;
+  background-color: lightblue;
+  border-radius: 8px;
+
 }
 
-.bookstack{
+.dontpost{
+  margin-left: 79%;
+  margin-top: 4%;
+  width: 100%;
+
+
+}
+
+
+.bookstack {
   height: 750px;
   width: 350px;
   z-index: 1;
   position: fixed;
-  margin-left:-1%;
+  margin-left: -1%;
 }
 
-.add-book-button{
+.add-book-button {
   margin-left: -73%;
   position: absolute;
   margin-top: -1.2%;
+  background-color: lightblue;
 }
 
-.make-post-button{
+.make-post-button {
   margin-left: -48%;
   position: absolute;
   margin-top: -1.2%;
+  background-color: lightblue;
 }
 
-.logout-button{
-  margin-left: 77%;
+.logout-button {
+  margin-left: 75%;
   position: absolute;
-  margin-top: -1.2%;
+  margin-top: -1%;
+  background-color: lightblue;
 }
 
-.signup-button{
+.signup-button {
   margin-left: 77%;
   position: absolute;
   margin-top: .1%;
+  background-color: lightblue;
+  border-radius: 8px;
 }
-.login-button{
+
+.login-button {
   margin-right: -88%;
   position: sticky;
   margin-top: .1%;
+  background-color: lightblue;
+  border-radius: 8px;
 }
 
 
@@ -61,9 +83,20 @@ input {
 
 }
 
+
+
 button {
   cursor: pointer;
-  border-radius: 13px;
+  border-radius: 8px;
+  outline: white;
+  background-color: transparent;
+  border: none;
+}
+
+.clear {
+
+  outline: white;
+
 }
 
 .button2 {
@@ -73,9 +106,14 @@ button {
 }
 
 * {
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: large;
 }
+
+
+
+
+
 
 .on {
   color: #000;
@@ -133,6 +171,7 @@ button {
   margin-top: 100%;
   position: absolute;
   margin-left: -180%;
+
 }
 
 .header {
@@ -145,19 +184,36 @@ button {
 }
 
 .header3 {
-  margin-left: -78%;
+  margin-left: -47%;
+  font-size: 32;
+  margin-top: 27%;
 }
 
 .header4 {
-  margin-left: -67%;
+  margin-top: 17%;
+  margin-left: -32%;
+}
+
+.header5 {
+  margin-left: -22%;
+  margin-top: 28%;
+  font-size: 22px;
+
 }
 
 .below-nav {
-  margin-top: 6%;
+  margin-top: 4%;
   justify-content: center;
   display: grid;
   align-content: center;
-  font-size: 32px;
+  font-size: 48px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(#58adff, #f197e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+
+
 }
 
 .below-nav2 {
@@ -169,12 +225,16 @@ button {
 }
 
 .below-nav3 {
-  margin-top: 8%;
-  justify-content: center;
+  margin-top: 19%;
+  margin-left: 34.8%;
   display: grid;
   align-content: center;
-  font-size: 74px;
-  color: blue;
+  font-size: 110px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(#e6f197, #51C2FF, #f197e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
 }
 
 .writepost {
@@ -190,8 +250,8 @@ button {
 }
 
 .post-space {
-  position: sticky;
-  margin-top: 1.5%;
+  margin-top: 1%;
+  position: relative;
 }
 
 .search {
@@ -208,7 +268,7 @@ button {
   margin-top: -2%;
   width: 90px;
   height: 90px;
-  border-radius: 100%; 
+  border-radius: 100%;
   margin-right: 15%;
 }
 
@@ -225,29 +285,29 @@ button {
 }
 
 .post-container2 {
-  background-color: white;
   border-radius: 1em;
   display: grid;
   justify-content: center;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 2%;
+  position:-webkit-sticky;
+
 }
 
 .post-container {
-  background-color: white;
   border-radius: 1em;
   display: grid;
   justify-content: center;
 }
 
 .post-container6 {
-  margin-top: -3%;
-  margin-left: 44.6%;
-  font-size: 22px;
+  margin-top: -1%;
+  margin-left: 42%;
+  font-size: 28px;
+
 }
 
 .post-container-plus {
-  background-color: white;
   border-radius: 1em;
   display: grid;
   justify-content: center;
@@ -255,11 +315,20 @@ button {
 }
 
 .author-container {
-  margin-left: 16%;
-  margin-top: -9%;
+  margin-left: 6%;
+  margin-top: -6%;
   width: 100%;
+  font-size: 24px;
+  
 }
 
+.post-size8 {
+  min-width: 40%;
+  height: 78px;
+  margin-left: 18%;
+  margin-top: 4%;
+
+}
 
 
 .post-size {
@@ -271,18 +340,17 @@ button {
 
 .post-size5 {
 
-  margin-left: 2%;
+  margin-left: 29%;
 
 }
 
 .post-size6 {
 
-  margin-left: -12.5%;
+  margin-left: 18.5%;
 
 }
 
 .inline {
-  background-color: white;
   display: grid;
   justify-content: center;
 }
@@ -359,5 +427,12 @@ button {
   margin-left: 46%;
   position: fixed;
   width: 100%;
- margin-bottom: 5%;
+  margin-bottom: 5%;
+}
+
+.see-comments{
+margin-top: -1.5%;
+
+
+
 }
