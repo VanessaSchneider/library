@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-function FeedPage ({ posts, users, commentForm, setCommentForm }) {
+function FeedPage ({ posts, user, commentForm, setCommentForm }) {
   function showCommentForm () {
     setCommentForm(commentForm => true)
   }
-  console.log(posts)
+  console.log(posts, user)
   let post = []
-  if (posts && posts.length !== 0) {
+  if (user && posts && posts.length !== 0) {
     post = posts.map(post => (
       <div key={post.id}>
         <div className='user-feed-container'>
