@@ -61,6 +61,7 @@ function CommentPage ({ handleDeleteComment }) {
           <div className='post-container'>
             <Link to={`/users/${comment.username}`}>{comment.username}</Link>
           </div>
+          <br></br>
           <div className='post-container'>{comment.content}</div>
         </div>
       ) : null}
