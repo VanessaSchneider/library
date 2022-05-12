@@ -151,7 +151,7 @@ function App () {
             ) : null}
           </nav>
           <br></br>
-          {user ? null : <h1 className='see-comments'>Read & Talk</h1>}
+          {user ? null : <h1 className='below-nav3'>Read & Talk</h1>}
 
         </div>
       </div>
