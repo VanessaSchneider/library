@@ -7,6 +7,10 @@ input {
   border-radius: 5px;
 }
 
+form{
+  background-color: transparent;
+}
+
 .home-button {
   position: absolute;
   margin-top: -.1%;
@@ -72,15 +76,24 @@ input {
 
 
 .add-book {
-  margin-top: 6%;
+  margin-top: 7%;
   margin-left: 43%;
 
 }
 
 .add-book1 {
-  margin-top: 4%;
-  margin-left: 34%;
+  margin-top: 6%;
+  margin-left: 26%;
+  font-size: 28px;
+  background: linear-gradient(#58adff, #f197e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
+.dont-add-button{
 
+margin-left: 74%;
+margin-top: 10%;
 }
 
 
@@ -151,9 +164,17 @@ button {
 }
 
 .signup {
-  margin-top: 230%;
-  margin-left: -80%;
-}
+ 
+    position:fixed;
+    z-index: 1;
+  padding-left: -40%;
+padding-right: 50%;
+padding-bottom: 1%;
+border-radius: 2px;
+margin-left: -5%;
+margin-top: 2%;}
+
+
 
 .comment-delete {
   margin-top: 1%;
@@ -168,7 +189,7 @@ button {
 }
 
 .login {
-  margin-top: 100%;
+  margin-top: 90%;
   position: absolute;
   margin-left: -180%;
 
@@ -184,20 +205,29 @@ button {
 }
 
 .header3 {
-  margin-left: -47%;
+  margin-left: -22%;
   font-size: 32;
-  margin-top: 27%;
+  margin-top: 28%;
+  font-size: 27px;
+  background: linear-gradient(#58adff, #f197e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
 }
 
 .header4 {
-  margin-top: 17%;
-  margin-left: -32%;
+  margin-top: 6%;
+  margin-left: 10%;
 }
 
 .header5 {
-  margin-left: -22%;
+  margin-left: -14%;
   margin-top: 28%;
-  font-size: 22px;
+  font-size: 26px;
+  background: linear-gradient(#58adff, #f197e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
 
 }
 
@@ -336,7 +366,7 @@ button {
 .post-size8 {
   min-width: 40%;
   height: 78px;
-  margin-left: 18%;
+  margin-left: 27%;
   margin-top: 4%;
 
 }
@@ -351,13 +381,13 @@ button {
 
 .post-size5 {
 
-  margin-left: 29%;
+  margin-left: 40%;
 
 }
 
 .post-size6 {
 
-  margin-left: 18.5%;
+  margin-left: 31%;
 
 }
 

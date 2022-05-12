@@ -16,6 +16,8 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
     history.push('/') 
   }
 
+
+
   function handleSignup (e) {
     e.preventDefault()
     fetch('/makebook', {
@@ -37,8 +39,8 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
    
   return (
 <div>
-    <div className = "add-book1">
-    <h3>Don't see the book you want to discuss, add it to our list</h3>
+    <div>
+    <div className = "add-book1">Don't see the book you want to discuss, add it to our list</div>
     </div>
     <div className = "add-book">
     <form onSubmit={handleSignup}>
@@ -71,6 +73,11 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
         <input type='submit' className='btn btn-outline-light'></input>
       </div>
     </form>
+  </div>
+  <div
+   className = "dont-add-button">
+  <button
+  onClick = {handleReroute}>Don't add Book</button>
   </div>
   </div>
 

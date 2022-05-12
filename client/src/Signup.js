@@ -51,7 +51,7 @@ function Signup ({ login }) {
   }
 
   const signupBox = (
-    <div className='signup'>
+    <div className="signup">
       <form onSubmit={handleSignup}>
         <div>
           <input
@@ -121,7 +121,6 @@ function Signup ({ login }) {
       <nav>
         <button
           type='button'
-          className='btn btn-outline-light'
           onClick={() => setSignup(!signup)}
         >
           Sign Up
