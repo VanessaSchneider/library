@@ -9,6 +9,7 @@ function FeedPage ({ posts, user, commentForm, setCommentForm }) {
   if (user && posts && posts.length !== 0) {
     post = posts.map(post => (
       <div key={post.id}>
+      
         <div className='user-feed-container'>
           <img className='feedSize' src={post.user.photo}></img>{' '}
           <div className='username'>

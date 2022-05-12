@@ -11,6 +11,7 @@ import TweetPage from './TweetPage'
 import CommentPage from './CommentPage'
 import photo from './photo.jpeg'
 import AddBook from './AddBook'
+import photo2 from './bookstack.jpg'
 
 function App () {
   const [user, setUser] = useState(null)
@@ -106,6 +107,12 @@ function App () {
   return (
     <div>
       <div>
+      <div>
+        {location.pathname === '/' ?
+          <img 
+          className = "bookstack"
+          src = {photo2}></img> : null}
+        </div>
         <div>
           <nav className='nav'>
             {user ? null : <Signup onLogin={setUser} login={login} />}
@@ -136,14 +143,16 @@ function App () {
     <button >Rate the Movie</button>
     </Link>: null} */}
             {user && location.pathname !== '/' ? (
+              <div className = "home-button">
               <Link to='/'>
                 <button>Home</button>
               </Link>
+              </div>
             ) : null}
           </nav>
           <br></br>
           {user ? null : <h1 className='below-nav3'>Read & Talk</h1>}
-          {user ? null : <img src={photo} className='size'></img>}
+          {/* {user ? null : <img src={photo} className='size'></img>} */}
         </div>
       </div>
       <Switch>
