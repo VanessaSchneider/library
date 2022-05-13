@@ -69,7 +69,7 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
         />
       </div>
 
-      <div>
+      <div className="submit-book">
         <input type='submit' className='btn btn-outline-light'></input>
       </div>
     </form>
