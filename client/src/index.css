@@ -4,12 +4,15 @@ body {
 }
 
 input {
-  border-radius: 5px;
+  border-radius: 20px;
+  padding: 10px;
+
 }
 
 form{
-  background-color: transparent;
+  border-radius: 10px;
 }
+
 
 .dont-post{
   position:absolute;
@@ -71,6 +74,7 @@ form{
   margin-top: .1%;
   background-color: lightblue;
   border-radius: 8px;
+  
 }
 
 .login-button {
@@ -79,6 +83,7 @@ form{
   margin-top: .1%;
   background-color: lightblue;
   border-radius: 8px;
+  
 }
 
 
@@ -179,7 +184,17 @@ padding-right: 50%;
 padding-bottom: 1%;
 border-radius: 2px;
 margin-left: -5%;
-margin-top: 2%;}
+margin-top: 2%;
+background-color: transparent;
+  padding: 30px;
+  border-radius: 10px;
+  border: none;
+  
+  input{
+    border:none;
+  }
+
+}
 
 
 
@@ -196,9 +211,15 @@ margin-top: 2%;}
 }
 
 .login {
-  margin-top: 90%;
+  margin-top: 60%;
   position: absolute;
-  margin-left: -180%;
+  margin-left: -230%;
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 10px;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
 
 }
 

@@ -125,7 +125,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
       return (
         <div className='dont-post'>
           <button className='button-center' onClick={handleWritePostClick}>
-            Don't Write a Post{' '}
+           Go Back{' '}
           </button>
         </div>
       )
@@ -229,7 +229,7 @@ function MakePost ({ handleAddPost, makePostDisplay, setMakePostDisplay }) {
             </div>
             <div className = "dontpost">
               <br></br>
-              <button onClick={reset}>Don't Make a Post </button>
+              <button onClick={reset}>Go Back </button>
             </div>
           </div>
         ) : null}

@@ -77,7 +77,7 @@ function AddBook ({addBookDisplay, setAddBookDisplay}) {
   <div
    className = "dont-add-button">
   <button
-  onClick = {handleReroute}>Don't add Book</button>
+  onClick = {handleReroute}>Go Back</button>
   </div>
   </div>
 
