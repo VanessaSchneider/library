@@ -296,7 +296,7 @@ background-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
-  position: -relative;
+  position: absolute;
 }
 
 .writepost {
