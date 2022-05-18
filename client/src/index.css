@@ -74,6 +74,7 @@ form{
   margin-top: .1%;
   background-color: lightblue;
   border-radius: 8px;
+  z-index: 2;
   
 }
 
@@ -297,6 +298,7 @@ background-color: transparent;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
   position: absolute;
+  z-index: 2;
 }
 
 .writepost {
