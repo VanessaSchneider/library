@@ -69,8 +69,8 @@ form{
 }
 
 .signup-button {
-  margin-left: 77%;
-  position: absolute;
+  margin-left: 85%;
+  position: -webkit-sticky;
   margin-top: .1%;
   background-color: lightblue;
   border-radius: 8px;
@@ -78,7 +78,7 @@ form{
 }
 
 .login-button {
-  margin-right: -88%;
+  margin-right: 2%;
   position: sticky;
   margin-top: .1%;
   background-color: lightblue;
@@ -296,6 +296,7 @@ background-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
+  position: -webkit-sticky;
 }
 
 .writepost {
