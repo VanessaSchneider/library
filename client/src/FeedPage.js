@@ -1,11 +1,20 @@
 import { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 function FeedPage ({posts, commentForm, setCommentForm, setPosts}) {
-  const [user, setUser] = useState(null)
+  const [me, setUser] = useState(null)
   function showCommentForm () {
     setCommentForm(commentForm => true)
   }
 
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((data) => setUser(data));
+      }
+    });
+  }, []);
+
+console.log("user",me)
 
   let post = []
 
@@ -21,6 +30,7 @@ function FeedPage ({posts, commentForm, setCommentForm, setPosts}) {
             <Link to={`/users/${post.user.username}`}>
               {post.user.username}
             </Link>
+        
           </div>
           <div className='post-space'>
             <Link to={`/posts/${post.id}`}>
