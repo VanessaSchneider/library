@@ -1,26 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :ratings
-  resources :matches
-  resources :friends
-  resources :shows
-  resources :comments
-  resources :posts
-  resources :sessions
-  resources :users
 
 
-post '/search' ,to: "shows#search"
-post '/getuser' ,to: "users#getuser"
-post '/getpost' => 'posts#getpost'
-post '/getcomment' => 'comments#getcomment'
-
-
-post "/addfriend", to: "friends#create"
-
+  resources :pages
+  resources :books
   post "/signup", to: "users#create"
   get "/me", to: "users#me"
-  post "/makebook", to: "shows#create"
+
 
 
   post "/login", to: "sessions#login"

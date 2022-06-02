@@ -14,12 +14,7 @@ form{
 }
 
 
-.dont-post{
-  position:absolute;
-  margin-left: 9%;
-  margin-top: -.4%;
 
-}
 
 .home-button {
   position: absolute;
@@ -30,43 +25,10 @@ form{
 
 }
 
-.dontpost{
-  margin-left: 79%;
-  margin-top: 4%;
-  width: 100%;
 
 
-}
 
 
-.bookstack {
-  height: 750px;
-  width: 350px;
-  z-index: 1;
-  position: fixed;
-  margin-left: -1%;
-}
-
-.add-book-button {
-  margin-left: -73%;
-  position: absolute;
-  margin-top: -.8%;
-  background-color: lightblue;
-}
-
-.make-post-button {
-  margin-left: -48%;
-  position: absolute;
-  margin-top: -.8%;
-  background-color: lightblue;
-}
-
-.logout-button {
-  margin-left: 75%;
-  position: absolute;
-  margin-top: -.9%;
-  background-color: lightblue;
-}
 
 .signup-button {
   margin-left: 77%;
@@ -88,30 +50,9 @@ form{
 }
 
 
-.add-book {
-  margin-top: 7%;
-  margin-left: 43%;
 
-}
 
-.add-book1 {
-  margin-top: 6%;
-  margin-left: 26%;
-  font-size: 28px;
-  background: linear-gradient(#58adff, #f197e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
-}
-.dont-add-button{
 
-margin-left: 60%;
-margin-top: -2%;
-}
-
-.submit-book{
-  margin-left: 7.8%;
-}
 
 
 button {
@@ -128,11 +69,6 @@ button {
 
 }
 
-.button2 {
-  cursor: pointer;
-  background-color: Transparent;
-  border: none;
-}
 
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -193,26 +129,18 @@ background-color: transparent;
   padding: 30px;
   border-radius: 10px;
   border: none;
+}
   
   input{
     border:none;
   }
 
-}
 
 
 
-.comment-delete {
-  margin-top: 1%;
-  margin-left: -3%;
 
-}
 
-.comment-delete2 {
-  margin-top: 1%;
-  margin-left: -1.5%;
 
-}
 
 .login {
   margin-top: 60%;
@@ -227,294 +155,40 @@ background-color: transparent;
 
 }
 
-.header {
-  margin-left: -49%;
-  font-size: 22px;
-}
-
-.header2 {
-  margin-left: -17%;
-}
-
-.header3 {
-  margin-left: -22%;
-  font-size: 32;
-  margin-top: 28%;
-  font-size: 27px;
-  background: linear-gradient(#58adff, #f197e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
-}
-
-.header4 {
-  margin-top: 6%;
-  margin-left: 10%;
-}
-
-.header5 {
-  margin-left: -14%;
-  margin-top: 28%;
-  font-size: 26px;
-  background: linear-gradient(#58adff, #f197e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
-
-}
-
-.below-nav {
-  margin-top: 4%;
-  justify-content: center;
-  display: grid;
-  align-content: center;
-  font-size: 54px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(#58adff, #f197e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
 
 
-}
 
-.below-nav2 {
-  margin-top: 50%;
-  justify-content: center;
-  margin-right: 50%;
-  width: 100%;
-  height: 80%;
-}
-
-.below-nav3 {
-  margin-top: 18%;
-  margin-left: 34.8%;
-  display: grid;
-  align-content: center;
-  font-size: 110px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(#e6f197, #51C2FF, #f197e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
-  position: absolute;
-  z-index: 2;
-}
-
-.writepost {
-  position: -webkit-sticky;
-  margin-left: 47%;
-  margin-top: -3%;
-}
-
-.username {
-  position: sticky;
-  margin-top: -2%;
-  margin-left: 1.9%;
-}
-
-.post-space {
-  margin-top: 1.9%;
-  position: relative;
-}
 
 .search {
   margin-left: -18%;
 }
 
-.book-size {
-  height: 230px;
-  width: 170px;
-    display: grid;
-    justify-content: center;
-  
-}
 
-.feedSize {
-  margin-top: -2%;
-  width: 90px;
-  height: 90px;
-  border-radius: 100%;
-  margin-right: 15%;
-}
 
-.submit-forms {
-  justify-content: center;
+
+
+.centered{
   display: grid;
-}
-
-.tweetimage {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  margin-left: -9%;
-}
-
-.post-container2 {
-  border-radius: 1em;
-  display: grid;
-  justify-content: center;
-  margin-top: 1.2%;
-  margin-bottom: 2%;
-  position:-webkit-sticky;
-
-}
-.post-container-smaller {
-  display: grid;
-  justify-content: center;
-  margin-top: -.8%;
-}
-
-.post-container {
-  display: grid;
-  justify-content: center;
-}
-.post-container-bigger {
-  font-size: 32px;
-  display: grid;
-  justify-content: center;
-}
-
-.post-container6 {
-  margin-top: -1%;
-  margin-left: 42.3%;
-  font-size: 28px;
-
-}
-
-.post-container-plus {
-  border-radius: 1em;
-  display: grid;
-  justify-content: center;
-  gap: 13px;
-}
-
-.author-container {
-  margin-left: 5%;
-  margin-top: -6%;
-  width: 100%;
-  font-size: 22px;
-  
-}
-
-.post-size8 {
-  min-width: 40%;
-  height: 78px;
-  margin-left: 27%;
-  margin-top: 4%;
+  place-items:center;
 
 }
 
 
-.post-size {
-  min-width: 40%;
-  height: 78px;
-  margin-left: -7%;
-
-}
-
-.post-size5 {
-
-  margin-left: 40%;
-
-}
-
-.post-size6 {
-
-  margin-left: 31%;
-
-}
-
-.inline {
-  display: grid;
-  justify-content: center;
-}
-
-.post-size2 {
-  margin-left: 12%;
-}
-
-.post-size3 {
-  margin-left: 41%;
-}
-
-
-.post-container0{
-position: -webkit-sticky;
-margin-left: -99%;
-
-
-}
-.post-size4 {
-  min-width: 40%;
-  height: 78px;
-  margin-left: 16%;
-}
-
-.user-feed-container {
-  text-align: center;
-  width: 100%;
-  gap: 5px;
-  margin-top: 65px;
-  justify-content: center;
-}
-
-.user-feed-image {
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-}
-
-.welcome {
-  margin-left: 610px;
-}
-
-.size {
-  height: 550px;
-  width: 550px;
-  margin-left: 29.9%;
-  border-radius: 100%;
-}
-
-.delete-post {
-  margin-left: 47%;
-}
-
-.comments-container {
-  display: flex;
-  border-top: thin solid rgb(143, 142, 142);
-  gap: 10px;
-  padding-left: 70px;
-}
-
-.comments-headline {
-  margin-left: 47%;
-}
-
-.side-nav {
-  position: -webkit-sticky;
-  margin-top: -3%;
-  margin-left: 77%;
-}
-
-.comment-format {
-  margin-top: 12%;
-
-
-}
-
-
-.tweet-page-comment {
-  margin-top: -1.5%;
-  margin-left: 46%;
-  position: fixed;
-  width: 100%;
-  margin-bottom: 5%;
-}
-
-.see-comments{
-margin-top: -1.5%;
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
