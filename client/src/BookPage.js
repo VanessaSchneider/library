@@ -22,9 +22,17 @@ function BookPage(){
 console.log(book)
 
     return(
-
+<div>
+    <br></br>
+    <br></br>
 <div className = "centered">{book.name}</div>
-
+<br></br>
+<div>First Few Paragraphs </div>
+<br></br>
+<div>{book.first_paragraphs}</div>
+<br></br>
+If you want to continue reading, start at chapter one
+</div>
     )
 }
 
