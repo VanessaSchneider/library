@@ -21,7 +21,10 @@ function App () {
         <Route exact path='/'>
 
     <div>
+      <br></br>
+      <br></br>
     <div className = "centered">Writers have a hard time getting their work out there. But here, we give authors the chance to get out there!</div> 
+    <br></br>
     <br></br>
     <BookDisplay books={books}/>
      </div>
