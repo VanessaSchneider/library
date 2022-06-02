@@ -29,7 +29,7 @@ console.log(book)
 <br></br>
 <div>First Few Paragraphs </div>
 <br></br>
-<div>{book.first_paragraphs}</div>
+<div className = "white">{book.first_paragraphs}</div>
 <br></br>
 If you want to continue reading, start at chapter one
 </div>
