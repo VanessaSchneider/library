@@ -4,6 +4,7 @@
 // import Logout from './Logout.js'
 import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom'
 import BookDisplay from './BookDisplay'
+import BookPage from './BookPage'
 
 
 function App () {
@@ -16,11 +17,22 @@ function App () {
 
 
   return (
+    <Switch>
+        <Route exact path='/'>
+
     <div>
     <div className = "centered">Writers have a hard time getting their work out there. But here, we give authors the chance to get out there!</div> 
     <br></br>
     <BookDisplay books={books}/>
      </div>
+     </Route>
+     <Route exact path={`/books/:name`}>
+          <BookPage
+          
+          />
+        </Route>
+
+     </Switch>
   )
 
 }

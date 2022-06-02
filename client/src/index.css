@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background: linear-gradient(#97cff1, #e1ffff, #97cff1);
+  background: linear-gradient(to bottom right,#F9B4F6, #B1D8B7, #F9B4F6);
 }
 
 input {
