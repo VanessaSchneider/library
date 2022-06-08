@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Signup from './Signup'
 import Logout from './Logout.js'
 import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom'
-//import UserPage from './UserPage'
+import UserPage from './UserPage'
 import BookPage from './BookPage'
 import FeedPage from './FeedPage'
 
@@ -83,41 +83,32 @@ function App () {
           ) : null}
         </nav>
 
-
-
-      <Switch>
-        <Route exact path='/'>
-          <div>
-          {user ? (
-          <div>
-            <h1 className='centered2'>
-              Welcome to the Library, {user.username}
-            </h1>
-            <h2 className='centered3'>
-              Would you like to check out any of these books?
-            </h2>
-          </div>
-        ) : (
-          <h1 className='centered'>Welcome to the Library</h1>
-        )}
-           
-          </div>
-          {user  ? 
-            <FeedPage books={books} />: null}
-            </Route>
-            <Route exact path={`/books/:name`}>
-          <BookPage
-          />
-        </Route>
-
-       
-            </Switch>
-            
-
-</div>
-
-
-
+        <Switch>
+          <Route exact path='/'>
+            <div>
+              {user ? (
+                <div>
+                  <h1 className='centered2'>
+                    Welcome to the Library, {user.username}
+                  </h1>
+                  <h2 className='centered3'>
+                    Would you like to check out any of these books?
+                  </h2>
+                </div>
+              ) : (
+                <h1 className='centered'>Welcome to the Library</h1>
+              )}
+            </div>
+            {user ? <FeedPage books={books} /> : null}
+          </Route>
+          <Route exact path={`/books/:name`}>
+            <BookPage user={user} />
+          </Route>
+          <Route exact path={`/users/:username`}>
+            <UserPage />
+          </Route>
+        </Switch>
+      </div>
     </div>
   )
 }

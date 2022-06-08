@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 
 function BookPage() {
   const [book, setBook] = useState("");
+  const [user, setUser] =useState("")
   const history = useHistory();
   const { name } = useParams();
   const bookData = {
@@ -25,6 +26,14 @@ function BookPage() {
       .then((book) => setBook(book));
   }, []);
 
+
+  useEffect(() => {
+    fetch('/me').then(response => {
+      if (response.ok) {
+        response.json().then(data => setUser(data))
+      }
+    })
+  }, [])
   
   console.log(book)
 
@@ -38,7 +47,10 @@ function BookPage() {
       <img img className='big-size' src={book.photo}></img>
       <br></br>
       <br></br>
-      Check Out This Book From The Library
+      <br></br>
+      <Link to={`/users/${user.username}`}>
+      <button className ="checkout"> Check Out This Book </button>
+      </Link>
     </div>
   )
 }

@@ -204,6 +204,13 @@ background-color: transparent;
   
 }
 
+.checkout {
+  outline:black;
+
+
+}
+
+
 .big-size {
   height: 300px;
   width: 200px;
