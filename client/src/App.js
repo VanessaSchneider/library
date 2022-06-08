@@ -3,14 +3,13 @@ import { useState, useEffect } from 'react'
 import Signup from './Signup'
 import Logout from './Logout.js'
 import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom'
-// import UserPage from './UserPage'
-// import BookPage from './BookPage'
- import FeedPage from './FeedPage'
+//import UserPage from './UserPage'
+import BookPage from './BookPage'
+import FeedPage from './FeedPage'
 
 function App () {
   const [user, setUser] = useState(null)
-  const [users, setUsers] = useState([])
-  const [books, setBooks] =useState([])
+  const [books, setBooks] = useState([])
   const history = useHistory()
   const location = useLocation()
 
@@ -41,13 +40,7 @@ function App () {
       .then(data => (user.username ? setUser(data) : null))
   }
 
-  useEffect(() => {
-    fetch('/users')
-      .then(res => res.json())
-      .then(data => setUsers(data))
-  }, [])
-
-console.log(books)
+  console.log(books)
   useEffect(() => {
     fetch('/books')
       .then(res => res.json())
@@ -73,30 +66,37 @@ console.log(books)
   return (
     <div>
       <div>
-      <nav className='nav'>
-        {user ? null : <Signup onLogin={setUser} login={login} />}
+        <nav className='nav'>
+          {user ? null : <Signup onLogin={setUser} login={login} />}
+          {user ? (
+            <Logout handleLogout={handleLogout} />
+          ) : (
+            <Login onLogin={setUser} />
+          )}
+          {user ? <div></div> : null}
+          {user && location.pathname !== '/' ? (
+            <div className='home-button'>
+              <Link to='/'>
+                <button>Home</button>
+              </Link>
+            </div>
+          ) : null}
+        </nav>
         {user ? (
-          <Logout handleLogout={handleLogout} />
+          <div>
+            <h1 className='centered2'>
+              Welcome to the Library, {user.username}
+            </h1>
+            <h2 className='centered3'>
+              Would you like to check out any of these books?
+            </h2>
+          </div>
         ) : (
-          <Login onLogin={setUser} />
+          <h1 className='centered'>Welcome to the Library</h1>
         )}
-        {user ? <div></div> : null}
-        {user && location.pathname !== '/' ? (
-          <div className='home-button'>
-            <Link to='/'>
-              <button>Home</button>
-            </Link>
-          </div>
-        ) : null}
-      </nav>
-          {user ? <div><h1 className = "centered2">Welcome to the Library, {user.username}</h1>
-          <h2 className = "centered3">Would you like to check out any of these books?</h2>
-          </div> :
-     <h1 className = "centered">Welcome to the Library</h1>}
- {user? <FeedPage books={books}/> : null}
-          </div>
-          </div>
-
+        {user ? <FeedPage books={books} /> : null}
+      </div>
+    </div>
   )
 }
 
