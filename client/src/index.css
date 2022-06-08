@@ -185,7 +185,7 @@ background-color: transparent;
 .centered2{
   display: grid;
   place-items:center;
-  margin-top: 10%;
+  margin-top: 6%;
 
 }
 .centered3{
@@ -222,6 +222,15 @@ background-color: transparent;
 .catTile {
   display: inline-flex;
   padding: 2%;;
+}
+
+
+
+
+.catTile2 {
+  display: inline-flex;
+   margin-right: 10%;
+  margin-left: 10%; 
 }
 
 
