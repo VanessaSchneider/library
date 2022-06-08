@@ -37,6 +37,7 @@ function BookPage() {
       <br></br>
       <img img className='big-size' src={book.photo}></img>
       <br></br>
+      <br></br>
       Check Out This Book From The Library
     </div>
   )
