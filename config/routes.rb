@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#login"
   delete "/logout", to: "sessions#destroy"
 
+  get '/getCheckedBooks' => 'users#get_books'
+
 
   get ':username' => 'users#show'
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import CheckedContainer from './CheckedContainer'
 
-function UserPage () {
+function UserPage ({booksToShow}) {
     const [user, setUser] =useState("")
 
 
@@ -15,8 +15,8 @@ function UserPage () {
       }, [])
 
       let checkedContainer =[]
-      if (user && user.books.length!==0){
-       checkedContainer = user.books.map(book => (
+      if (booksToShow!==0){
+       checkedContainer = booksToShow.map(book => (
         <CheckedContainer book={book} key={book.name} />
       ))
       }

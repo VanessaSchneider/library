@@ -10,6 +10,7 @@ import FeedPage from './FeedPage'
 function App () {
   const [user, setUser] = useState(null)
   const [books, setBooks] = useState([])
+  const [checkedBooks, setCheckedBooks] = useState([])
   const history = useHistory()
   const location = useLocation()
 
@@ -46,6 +47,11 @@ function App () {
       .then(res => res.json())
       .then(data => setBooks(data))
   }, [])
+let booksToShow= []
+  if (user){
+   booksToShow =
+  books.filter((book)=>book.user_id === user.id)
+  console.log("bookstoshow", booksToShow)}
 
   function handleLogout () {
     fetch('/logout', {
@@ -105,7 +111,7 @@ function App () {
             <BookPage user={user} />
           </Route>
           <Route exact path={`/users/:username`}>
-            <UserPage />
+            <UserPage booksToShow={booksToShow} />
           </Route>
         </Switch>
       </div>

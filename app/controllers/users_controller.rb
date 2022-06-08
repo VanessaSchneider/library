@@ -30,6 +30,15 @@ class UsersController < ApplicationController
       end
     end
 
+
+    def get_books
+      me = User.find_by(id:session[:user_id])
+      filtered_books = me.books
+      render json: filtered_books, status: :ok
+    end
+
+
+
       def update
             user = User.find_by!(id: params[:id])
             user.update(user_params)
