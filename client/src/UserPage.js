@@ -5,10 +5,8 @@ function UserPage ({checkedBooks}) {
     const [user, setUser] =useState("")
 
 
-
-
       let checkedContainer =[]
-      if (checkedBooks!==0){
+      if (checkedBooks && checkedBooks!==0){
        checkedContainer = checkedBooks.map(book => (
         <CheckedContainer book={book} key={book.name} />
       ))
