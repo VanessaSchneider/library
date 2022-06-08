@@ -89,10 +89,12 @@ console.log(books)
           </div>
         ) : null}
       </nav>
-          {user ? <h1 className = "centered2">Welcome to the Library, {user.username}</h1> :
+          {user ? <div><h1 className = "centered2">Welcome to the Library, {user.username}</h1>
+          <h2 className = "centered3">Would you like to check out any of these books?</h2>
+          </div> :
      <h1 className = "centered">Welcome to the Library</h1>}
 
- <FeedPage books={books}/>
+ {user? <FeedPage books={books}/> : null}
           </div>
           </div>
 

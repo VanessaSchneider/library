@@ -3,9 +3,10 @@ function BookContainer({book}) {
 
 
     return (
-      <div>
-        <div className="centered"> {book.name} </div>
-        <div className="centered"> {book.author} </div>
+      <div className="centered">
+       {book.name} 
+       <br></br>
+        {book.author} 
         <img img className='book-size' src={book.photo}></img>
       </div>
     );
