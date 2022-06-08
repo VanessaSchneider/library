@@ -13,7 +13,11 @@ function UserPage () {
         })
       }, [])
 
-  return( <div>Hi from the user page</div>)
+  return(<div>
+      
+    <h1 className = "centered2">Hello {user.username}</h1>
+    <h2 className = "centered3">Books You Have Checked Out</h2>
+    </div>)
 }
 
 export default UserPage;
