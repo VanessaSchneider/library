@@ -1,18 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
 import CheckedContainer from './CheckedContainer'
 
 function UserPage ({booksToShow}) {
     const [user, setUser] =useState("")
 
 
-    useEffect(() => {
-        fetch('/me').then(response => {
-          if (response.ok) {
-            response.json().then(data => setUser(data))
-          }
-        })
-      }, [])
+
 
       let checkedContainer =[]
       if (booksToShow!==0){
