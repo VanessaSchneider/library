@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-function BookPage() {
+function BookPage({handleCheckOutBook}) {
   const [book, setBook] = useState("");
   const [user, setUser] = useState("");
   const history = useHistory();
@@ -12,6 +12,7 @@ function BookPage() {
   };
 
   function CheckOut() {
+    handleCheckOutBook(book)
     fetch(`/books/${book.id}`, {
       method: "PATCH",
       headers: {

@@ -8,7 +8,7 @@ function UserPage ({checkedBooks, handleReturnBook}) {
       let checkedContainer =[]
       if (checkedBooks && checkedBooks!==0){
        checkedContainer = checkedBooks.map(book => (
-        <CheckedContainer book={book} key={book.name} handleReturnBook={handleReturnBook} />
+        <CheckedContainer book={book} key={book.name} handleReturnBook={handleReturnBook}/>
       ))
       }
 

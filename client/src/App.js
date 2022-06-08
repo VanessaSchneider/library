@@ -66,6 +66,9 @@ function App() {
 const filteredBooks = checkedBooks.filter((book)=>book.id!==id)
 setCheckedBooks(filteredBooks)
  }
+ function handleCheckOutBook(newItem){
+    setCheckedBooks([...checkedBooks, newItem]);}
+
 
   return (
     <div>
@@ -106,10 +109,11 @@ setCheckedBooks(filteredBooks)
             {user ? <FeedPage books={books} /> : null}
           </Route>
           <Route exact path={`/books/:name`}>
-            <BookPage user={user} />
+            <BookPage user={user} handleCheckOutBook={handleCheckOutBook} />
           </Route>
           <Route exact path={`/users/:username`}>
-            <UserPage checkedBooks={checkedBooks} handleReturnBook={handleReturnBook}/>
+            <UserPage checkedBooks={checkedBooks} handleReturnBook={handleReturnBook}
+            />
           </Route>
         </Switch>
       </div>
