@@ -5,10 +5,22 @@ function CheckedContainer({book}) {
 
 
 function returnBook(){
+    fetch(`/books/${book.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: "",
+        }),
+      })
+      .then(r => r.json())
+        .then(data => console.log(data))
+    }
 
 
 
-}
+
 
 
   return (
