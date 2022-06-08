@@ -47,11 +47,15 @@ function App () {
       .then(res => res.json())
       .then(data => setBooks(data))
   }, [])
-let booksToShow= []
-  if (user){
-   booksToShow =
-  books.filter((book)=>book.user_id === user.id)
-  console.log("bookstoshow", booksToShow)}
+
+
+  useEffect(() => {
+    fetch('/getCheckedBooks')
+      .then(res => res.json())
+      .then(data => setCheckedBooks(data))
+  }, [])
+
+
 
   function handleLogout () {
     fetch('/logout', {
@@ -111,7 +115,7 @@ let booksToShow= []
             <BookPage user={user} />
           </Route>
           <Route exact path={`/users/:username`}>
-            <UserPage booksToShow={booksToShow} />
+            <UserPage checkedBooks={checkedBooks} />
           </Route>
         </Switch>
       </div>
