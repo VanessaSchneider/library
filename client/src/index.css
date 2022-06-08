@@ -29,7 +29,7 @@ form{
   position: absolute;
   margin-top: -.1%;
   margin-left: 77%;
-  background-color: lightblue;
+  background-color: transparent;
   border-radius: 8px;
 
 }
@@ -204,6 +204,13 @@ background-color: transparent;
   
 }
 
+.big-size {
+  height: 300px;
+  width: 200px;
+    display: grid;
+    justify-content: center;
+  
+}
 
 .catTile {
   display: inline-flex;

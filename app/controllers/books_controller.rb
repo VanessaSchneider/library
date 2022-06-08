@@ -24,15 +24,14 @@ class BooksController < ApplicationController
           end
         end
 
-        # def update
-        #     book = Book.find_by!(id: params[:id])
-        #       book.update(book_params)
-        #       if show.valid?
-        #       render json: show, status: :ok
-        #       else 
-        #       render json: { errors: show.errors.full_messages }, status: :unprocessable_entity
-        #       end
-        #     end
+        def getbook
+            book = Book.find_by!(name: params[:name])
+              if book.valid?
+              render json: book, status: :ok
+              else 
+              render json: { errors: book.errors.full_messages }, status: :unprocessable_entity
+              end
+            end
 
 
             def create
