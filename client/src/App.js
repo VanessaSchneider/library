@@ -82,7 +82,13 @@ function App () {
             </div>
           ) : null}
         </nav>
-        {user ? (
+
+
+
+      <Switch>
+        <Route exact path='/'>
+          <div>
+          {user ? (
           <div>
             <h1 className='centered2'>
               Welcome to the Library, {user.username}
@@ -94,8 +100,24 @@ function App () {
         ) : (
           <h1 className='centered'>Welcome to the Library</h1>
         )}
-        {user ? <FeedPage books={books} /> : null}
-      </div>
+           
+          </div>
+          {user  ? 
+            <FeedPage books={books} />: null}
+            </Route>
+            <Route exact path={`/books/:name`}>
+          <BookPage
+          />
+        </Route>
+
+       
+            </Switch>
+            
+
+</div>
+
+
+
     </div>
   )
 }
