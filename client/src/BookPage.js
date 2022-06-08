@@ -14,6 +14,22 @@ function BookPage() {
 
 
 
+  function CheckOut(){
+    fetch(`/books/${book.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: user.id,
+      }),
+    })
+    .then(r => r.json())
+      .then(data => console.log(data))
+  }
+
+  
+
   useEffect(() => {
     fetch("/getbook", {
       method: "POST",
@@ -49,7 +65,7 @@ function BookPage() {
       <br></br>
       <br></br>
       <Link to={`/users/${user.username}`}>
-      <button className ="checkout"> Check Out This Book </button>
+      <button onClick={CheckOut}className ="checkout"> Check Out This Book </button>
       </Link>
     </div>
   )
