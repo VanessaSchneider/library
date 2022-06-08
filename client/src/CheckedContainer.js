@@ -1,5 +1,6 @@
-function CheckedContainer({ book }) {
+function CheckedContainer({ book, handleReturnBook }) {
   function returnBook() {
+    handleReturnBook(book.id)
     fetch(`/books/${book.id}`, {
       method: "PATCH",
       headers: {

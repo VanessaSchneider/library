@@ -62,13 +62,10 @@ function App() {
       .then(() => handleReroute());
   }
 
-  function handleDeleteProfile() {
-    fetch(`/users/${user.id}`, {
-      method: "DELETE",
-    })
-      .then(() => setUser())
-      .then(() => handleReroute());
-  }
+ function handleReturnBook(id){
+const filteredBooks = checkedBooks.filter((book)=>book.id!==id)
+setCheckedBooks(filteredBooks)
+ }
 
   return (
     <div>
@@ -112,7 +109,7 @@ function App() {
             <BookPage user={user} />
           </Route>
           <Route exact path={`/users/:username`}>
-            <UserPage checkedBooks={checkedBooks} />
+            <UserPage checkedBooks={checkedBooks} handleReturnBook={handleReturnBook}/>
           </Route>
         </Switch>
       </div>
