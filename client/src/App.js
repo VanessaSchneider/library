@@ -5,7 +5,7 @@ import Logout from './Logout.js'
 import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom'
 // import UserPage from './UserPage'
 // import BookPage from './BookPage'
-// import AddBook from './AddBook'
+ import FeedPage from './FeedPage'
 
 function App () {
   const [user, setUser] = useState(null)
@@ -92,7 +92,7 @@ console.log(books)
           {user ? <h1 className = "centered2">Welcome to the Library, {user.username}</h1> :
      <h1 className = "centered">Welcome to the Library</h1>}
 
- 
+ <FeedPage books={books}/>
           </div>
           </div>
 
