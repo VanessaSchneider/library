@@ -10,28 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_02_191510) do
+ActiveRecord::Schema.define(version: 2022_06_07_221429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
-    t.string "summary"
-    t.string "first_paragraphs"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "chapters", force: :cascade do |t|
-    t.integer "book_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "pages", force: :cascade do |t|
-    t.integer "chapter_id"
-    t.integer "page_num"
+    t.string "photo"
+    t.string "author"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -39,10 +27,6 @@ ActiveRecord::Schema.define(version: 2022_06_02_191510) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "email"
-    t.string "photo"
-    t.integer "age"
-    t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

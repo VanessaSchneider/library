@@ -6,10 +6,7 @@ function Signup ({ login }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
-  const [age, setAge] = useState('')
-  const [email, setEmail] = useState('')
-  const [photo, setPhoto] = useState('')
-  const [bio, setBio] = useState('')
+ 
 
   function handleSignup (e) {
     e.preventDefault()
@@ -22,10 +19,7 @@ function Signup ({ login }) {
         username,
         password,
         passwordConfirmation,
-        age,
-        email,
-        photo,
-        bio
+      
       })
     })
       .then(r => r.json())
@@ -41,10 +35,7 @@ function Signup ({ login }) {
           setUsername('')
           setPassword('')
           setPasswordConfirmation('')
-          setAge('')
-          setEmail('')
-          setPhoto('')
-          setBio('')
+       
           alert('Profile Successfully Created! Please Log In.')
         }
       })
@@ -77,38 +68,7 @@ function Signup ({ login }) {
             placeholder='password confirmation'
           />
         </div>
-        <div>
-          <input
-            type='text'
-            value={age}
-            onChange={e => setAge(e.target.value)}
-            placeholder='age'
-          />
-        </div>
-        <div>
-          <input
-            type='text'
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder='email'
-          />
-        </div>
-        <div>
-          <input
-            type='text'
-            value={photo}
-            onChange={e => setPhoto(e.target.value)}
-            placeholder='photo'
-          />
-        </div>
-        <div>
-          <input
-            type='text'
-            value={bio}
-            onChange={e => setBio(e.target.value)}
-            placeholder='bio'
-          />
-        </div>
+    
         <div>
           <input type='submit' className='btn btn-outline-light'></input>
         </div>

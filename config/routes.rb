@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   
 
 
-  resources :chapters
-  resources :chpaters
-  resources :pages
+ 
   resources :books
   post "/signup", to: "users#create"
   get "/me", to: "users#me"

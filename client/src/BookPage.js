@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import page1 from "./page1.pdf"
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 function BookPage(){
     const [book, setBook]=useState("")
@@ -32,6 +35,8 @@ console.log(book)
 <div className = "white">{book.first_paragraphs}</div>
 <br></br>
 If you want to continue reading, start at chapter one
+
+
 </div>
     )
 }
