@@ -93,7 +93,6 @@ console.log(books)
           <h2 className = "centered3">Would you like to check out any of these books?</h2>
           </div> :
      <h1 className = "centered">Welcome to the Library</h1>}
-
  {user? <FeedPage books={books}/> : null}
           </div>
           </div>

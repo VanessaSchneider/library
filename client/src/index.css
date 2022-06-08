@@ -205,6 +205,11 @@ background-color: transparent;
 }
 
 
+.catTile {
+  display: inline-flex;
+  padding: 2%;;
+}
+
 
 
 
