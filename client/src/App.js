@@ -108,7 +108,7 @@ setCheckedBooks(filteredBooks)
             </div>
           ) : null}
            {user && location.pathname !== `/users/${user.username}` ? (
-            <div className="login-button">
+            <div className="signup-button">
            <Link to={`/users/${user.username}`}>
                 <button>My Checked Out Books</button>
               </Link>
@@ -125,11 +125,14 @@ setCheckedBooks(filteredBooks)
                     Welcome to the Library, {user.username}
                   </h1>
                   <h2 className="centered3">
-                    Would you like to check out any of these books?
+                    Would you like to check out any of these books? 
+                  </h2>
+                  <h2 className="centered3">
+                    Sorry we only have 1 copy of each book
                   </h2>
                 </div>
               ) : (
-                <h1 className="centered">Welcome to the Library</h1>
+                <h1 className="centered">Welcome to the Little Library</h1>
               )}
             </div>
             {user ? <FeedPage books={books} /> : null}

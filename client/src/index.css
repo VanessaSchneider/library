@@ -1,68 +1,57 @@
 body {
-
- 
 }
 
-.white
-{background-color: white;
-padding: 5%;
-border-radius: 12%;
-margin-left: 2%;
-margin-right: 2%;
-line-height: 1.6;}
+.white {
+  background-color: white;
+  padding: 5%;
+  border-radius: 12%;
+  margin-left: 2%;
+  margin-right: 2%;
+  line-height: 1.6;
+}
 
 input {
   border-radius: 20px;
   padding: 10px;
-  
-
 }
 
-form{
+form {
   border-radius: 10px;
 }
 
-
-
-
 .home-button {
   position: absolute;
-  margin-top: -.1%;
+  margin-top: -0.1%;
   margin-left: 77%;
   background-color: transparent;
   border-radius: 8px;
-
 }
-
-
-
-
-
 
 .signup-button {
   margin-left: 77%;
   position: absolute;
-  margin-top: .1%;
+  margin-top: 0.1%;
   background-color: transparent;
   border-radius: 8px;
   z-index: 2;
-  
+}
+
+
+
+.logout-button {
+  margin-left: -15%;
+  position: absolute;
+  margin-top: -.4%;
+  background-color: transparent
 }
 
 .login-button {
   margin-right: -90%;
   position: fixed;
-  margin-top: .1%;
+  margin-top: 0.1%;
   background-color: transparent;
   border-radius: 8px;
-  
 }
-
-
-
-
-
-
 
 button {
   cursor: pointer;
@@ -73,17 +62,8 @@ button {
 }
 
 .clear {
-
   outline: white;
-
 }
-
-
-
-
-
-
-
 
 .on {
   color: #000;
@@ -120,33 +100,24 @@ button {
   height: 80%;
 }
 
-
 .signup {
- 
-    position:fixed;
-    z-index: 1;
+  position: fixed;
+  z-index: 1;
   padding-left: -40%;
-padding-right: 50%;
-padding-bottom: 1%;
-border-radius: 2px;
-margin-left: -5%;
-margin-top: 2%;
-background-color: transparent;
+  padding-right: 50%;
+  padding-bottom: 1%;
+  border-radius: 2px;
+  margin-left: -5%;
+  margin-top: 2%;
+  background-color: transparent;
   padding: 30px;
   border-radius: 10px;
   border: none;
 }
-  
-  input{
-    border:none;
-  }
 
-
-
-
-
-
-
+input {
+  border: none;
+}
 
 .login {
   margin-top: 60%;
@@ -158,65 +129,44 @@ background-color: transparent;
   padding: 30px;
   border: none;
   border-radius: 10px;
-  
-
 }
-
-
-
-
 
 .search {
   margin-left: -18%;
 }
 
-
-
-
-
-.centered{
+.centered {
   display: grid;
-  place-items:center;
+  place-items: center;
   margin-top: 20%;
-
 }
 
-
-.centered2{
+.centered2 {
   display: grid;
-  place-items:center;
+  place-items: center;
   margin-top: 6%;
-
 }
-.centered3{
+.centered3 {
   display: grid;
-  place-items:center;
-  
-
+  place-items: center;
 }
-
 
 .book-size {
   height: 230px;
   width: 170px;
-    display: grid;
-    justify-content: center;
-  
+  display: grid;
+  justify-content: center;
 }
 
 .checkout {
-  outline:black;
-
-
+  outline: black;
 }
-
 
 .big-size {
   height: 300px;
   width: 200px;
-    display: grid;
-    justify-content: center;
-  
+  display: grid;
+  justify-content: center;
 }
 
 .catTile {
@@ -226,28 +176,8 @@ background-color: transparent;
   justify-content: center;
 }
 
-
-
-
 .catTile2 {
   display: inline-flex;
-   margin-right: 10%;
-  margin-left: 10%; 
+  margin-right: 10%;
+  margin-left: 10%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
