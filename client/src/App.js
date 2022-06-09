@@ -65,11 +65,25 @@ console.log("books",books)
       .then((data) => setCheckedBooks(data));
   }, []);
 
+
+  // useEffect(() => {
+  //   fetch("/getCheckedBooks")
+  //     .then((res) => res.json())
+  //     .then((data) => setCheckedBooks(data));
+  // }, [books]);
+
+
+  useEffect(() => {
+    fetch("/getCheckedBooks")
+      .then((res) => res.json())
+      .then((data) => setCheckedBooks(data));
+  }, [user]);
+
   function handleLogout() {
     fetch("/logout", {
       method: "DELETE",
     })
-      .then(() => setUser())
+      .then(() => setUser(""))
       .then(() => handleReroute());
   }
 
@@ -78,7 +92,7 @@ const filteredBooks = checkedBooks.filter((book)=>book.id!==id)
 setCheckedBooks(filteredBooks)
  }
  function handleCheckOutBook(newItem){
-    setCheckedBooks([...checkedBooks, newItem]);}
+    setCheckedBooks([newItem, ...checkedBooks]);}
 
     function handleDeleteBook(id){
       const filteredBooks1 = books.filter((book)=>book.id!==id)
@@ -107,7 +121,7 @@ setCheckedBooks(filteredBooks)
               </Link>
             </div>
           ) : null}
-           {user && location.pathname !== `/users/${user.username}` ? (
+           {user && location.pathname !== `/users/${user.username}` && checkedBooks.length>0 ? (
             <div className="signup-button">
            <Link to={`/users/${user.username}`}>
                 <button>My Checked Out Books</button>
