@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import CheckedContainer from './CheckedContainer'
 
-function UserPage ({checkedBooks, handleReturnBook}) {
+function UserPage ({checkedBooks, handleReturnBook, handleAddBook}) {
     const [user, setUser] =useState("")
 
 
       let checkedContainer =[]
       if (checkedBooks && checkedBooks!==0){
        checkedContainer = checkedBooks.map(book => (
-        <CheckedContainer book={book} key={book.name} handleReturnBook={handleReturnBook}/>
+        <CheckedContainer book={book} key={book.name} handleReturnBook={handleReturnBook} handleAddBook={handleAddBook}/>
       ))
       }
 

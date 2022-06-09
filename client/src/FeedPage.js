@@ -1,7 +1,11 @@
 import BookContainer from "./BookContainer";
-function FeedPage({ books }) {
+
+function FeedPage({books}) {
+ 
+
+
   const bookContainer = books.map((book) => (
-    <BookContainer book={book} key={book.name} />
+  <BookContainer book={book} key={book.name} />
   ));
   return <div>{bookContainer}</div>;
 }

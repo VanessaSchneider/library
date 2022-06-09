@@ -24,6 +24,12 @@ class BooksController < ApplicationController
         end
 
 
+        def get_books
+          books= Book.all
+          filtered_books = books.filter{|m| m.user_id ==0}
+          render json: filtered_books, status: :ok
+        end
+
 
 
         def getbook

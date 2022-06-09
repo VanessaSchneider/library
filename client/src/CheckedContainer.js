@@ -1,17 +1,23 @@
-function CheckedContainer({ book, handleReturnBook }) {
+function CheckedContainer({ book, handleReturnBook, handleAddBook}) {
   function returnBook() {
-    handleReturnBook(book.id)
+    handleAddBook(book)
+   ReturnBook()
+
     fetch(`/books/${book.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_id: "",
+        user_id: 0,
       }),
     })
       .then((r) => r.json())
       .then((data) => console.log(data));
+  }
+
+  function ReturnBook(){
+    handleReturnBook(book.id)
   }
 
   return (

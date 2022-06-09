@@ -19,6 +19,8 @@ function App() {
     history.push("/");
   };
 
+
+  
   useEffect(() => {
     fetch("/me").then((response) => {
       if (response.ok) {
@@ -43,10 +45,19 @@ function App() {
 
   console.log(books);
   useEffect(() => {
-    fetch("/books")
+    fetch("/getbooks")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
+
+console.log("books",books)
+
+// useEffect(() => {
+//   fetch("/getbooks")
+//     .then((res) => res.json())
+//     .then((data) => setBooks(data));
+// }, [checkedBooks]);
+
 
   useEffect(() => {
     fetch("/getCheckedBooks")
@@ -69,6 +80,14 @@ setCheckedBooks(filteredBooks)
  function handleCheckOutBook(newItem){
     setCheckedBooks([...checkedBooks, newItem]);}
 
+    function handleDeleteBook(id){
+      const filteredBooks1 = books.filter((book)=>book.id!==id)
+      setBooks(filteredBooks1)
+       }
+
+
+       function handleAddBook(newItem){
+        setBooks([...books, newItem])}
 
   return (
     <div>
@@ -85,6 +104,13 @@ setCheckedBooks(filteredBooks)
             <div className="home-button">
               <Link to="/">
                 <button>Home</button>
+              </Link>
+            </div>
+          ) : null}
+           {user && location.pathname !== `/users/${user.username}` ? (
+            <div className="login-button">
+           <Link to={`/users/${user.username}`}>
+                <button>My Checked Out Books</button>
               </Link>
             </div>
           ) : null}
@@ -109,10 +135,10 @@ setCheckedBooks(filteredBooks)
             {user ? <FeedPage books={books} /> : null}
           </Route>
           <Route exact path={`/books/:name`}>
-            <BookPage user={user} handleCheckOutBook={handleCheckOutBook} />
+            <BookPage user={user} handleCheckOutBook={handleCheckOutBook} handleDeleteBook={handleDeleteBook} />
           </Route>
           <Route exact path={`/users/:username`}>
-            <UserPage checkedBooks={checkedBooks} handleReturnBook={handleReturnBook}
+            <UserPage checkedBooks={checkedBooks} handleReturnBook={handleReturnBook} handleAddBook={handleAddBook} 
             />
           </Route>
         </Switch>

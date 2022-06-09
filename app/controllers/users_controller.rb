@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
     def get_books
       me = User.find_by(id:session[:user_id])
-      filtered_books = me.books
+      filtered_books = Book.where(user_id:me.id)
       render json: filtered_books, status: :ok
     end
 

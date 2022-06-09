@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   post '/getbook' => 'books#getbook'
 
+ get '/getbooks' => 'books#get_books'
+
   post "/login", to: "sessions#login"
   delete "/logout", to: "sessions#destroy"
 
