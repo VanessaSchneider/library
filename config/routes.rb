@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
  
-  resources :books
+  resources :books, :data
   post "/signup", to: "users#create"
   get "/me", to: "users#me"
 
